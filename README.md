@@ -112,6 +112,11 @@ python -m http.server 8000
 
 Depois acesse `http://localhost:8000`. Para testar a rota `/briefing/<codigo>` localmente é preciso um servidor com a regra de reescrita. Sem ela, use `http://localhost:8000/#b-<codigo>`, que também funciona.
 
+### 3.5 Versão de teste (`/teste`)
+
+O mesmo site tem uma versão de demonstração em `<seu-domínio>/teste`, com os clientes de exemplo, o selo "Protótipo" e o botão "Painel". Ela guarda os dados separados da versão oficial (`trioma-briefing:teste`), então os exemplos não se misturam com briefings reais. Os links gerados nela apontam para `/teste/briefing/<codigo>`. Para tirar, basta apagar a pasta `site/teste/` (e as regras de `/teste` no `vercel.json` e no `_redirects`).
+
+
 ---
 
 ## 4. O que já foi feito e testado nesta etapa
@@ -142,7 +147,7 @@ Todos esses itens foram testados em navegador simulando celular, iPad e computad
 - [ ] API e banco ligados em `Zw` / `Kw` (seção 2)
 - [ ] Login no painel
 - [ ] Upload das fotos da Biblioteca para o servidor
-- [ ] `siteUrl`, `og:image` e `<base href>` com o domínio real
+- [ ] `siteUrl`, `og:image` e `<base href>` com o domínio real (enquanto `siteUrl` tiver `SEU-DOMINIO`, o link usa o endereço onde o site está aberto)
 - [ ] `apiUrl` + SMTP do `notify.py` (e-mail com o PDF)
 - [ ] Política de privacidade publicada e `politicaPrivacidadeUrl` preenchida (LGPD: o briefing coleta rotina, composição da família e pets)
 - [ ] Regras de `/briefing/*`, cache e compressão ativas no servidor

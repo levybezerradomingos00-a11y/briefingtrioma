@@ -175,3 +175,8 @@
 - Correção: na rota `/briefing/<código>`, imagens e gerador de PDF agora carregam da raiz do site (`<base href="/">`).
 - Correção: abrir o link do cliente e depois voltar para o painel não reabre mais o cliente.
 - O Artifact continua em modo de teste. A pasta "PARA ENVIAR PRO LUCAS" tem o zip de hospedagem (modo de produção), o LEIA-ME (.md e .html) e os artefatos do projeto.
+
+## 20/10/2026, 20h50 (Artifact versão 41): versão de teste no mesmo site (Vercel)
+- `vercel.json` na raiz do repositório: a Vercel publica a pasta `site/`, sem build, com a regra de `/briefing/<código>`.
+- Nova versão de demonstração em `/teste`: clientes de exemplo, selo de protótipo e botão "Painel", com dados guardados à parte (`trioma-briefing:teste`) para não se misturar com a versão oficial.
+- Enquanto o domínio não for configurado (`SEU-DOMINIO`), o link do cliente usa o endereço onde o site está aberto.

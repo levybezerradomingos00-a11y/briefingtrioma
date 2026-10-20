@@ -1,6 +1,8 @@
 # Apache: /briefing/<codigo> abre o index.html
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^teste/briefing/ teste/index.html [L]
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^briefing/ index.html [L]
 AddType image/webp .webp
 AddType text/javascript .js
