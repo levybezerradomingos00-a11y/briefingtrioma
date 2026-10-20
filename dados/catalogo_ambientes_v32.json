@@ -1,0 +1,6235 @@
+{
+  "_sobre": "Catalogo extraido da build final (Briefing Trioma Visual v32, 14/10/2026). Ou = ambientes; Zr = estilos; Am = ordem fixa; config = constantes.",
+  "config": {
+    "VITE_ASSET_BASE (Ke)": "img",
+    "rota (xy)": "/briefing",
+    "site base (Ww)": "https://seusite.com.br",
+    "numero WhatsApp fixo (Vw)": "",
+    "chave localStorage (h2)": "trioma-briefing:v2"
+  },
+  "ordem_fixa_Am": [
+    "geral",
+    "hall",
+    "sala",
+    "cozinha",
+    "gourmet",
+    "lavabo_interno",
+    "lavabo_externo",
+    "master",
+    "closet",
+    "banho_master",
+    "servico",
+    "quarto",
+    "closet_suite",
+    "hospedes",
+    "hospedes_superior",
+    "banheiro"
+  ],
+  "estilos_Zr": {
+    "amadeirado": "Madeira aparente",
+    "claro": "Tons claros",
+    "escuro": "Tons escuros",
+    "minimalista": "Minimalista",
+    "classico": "Clássico",
+    "pedra": "Pedras e mármores",
+    "natural": "Natural e orgânico",
+    "iluminacao": "Iluminação cênica",
+    "cor": "Cor marcante",
+    "industrial": "Metal e industrial",
+    "dourado": "Dourado e luxo"
+  },
+  "ambientes_Ou": [
+    {
+      "id": "geral",
+      "name": "Sobre a família",
+      "kicker": "Pessoas · Rotina · Convivência",
+      "intro": "Começamos entendendo quem vai viver na casa, como é a rotina e o que vocês mais valorizam.",
+      "cover": "img/capas/geral.jpg",
+      "images": [],
+      "groups": [
+        {
+          "id": "quem",
+          "title": "Quem vai viver nesta casa?",
+          "subtitle": "As pessoas e os pets da casa. Quase tudo aqui é só tocar.",
+          "questions": [
+            {
+              "id": "moradores",
+              "type": "counts",
+              "label": "Quem vai morar na casa?",
+              "hint": "Toque para incluir e ajuste a quantidade.",
+              "icon": "users",
+              "max": 10,
+              "unit": [
+                "pessoa",
+                "pessoas"
+              ],
+              "options": [
+                {
+                  "value": "bebe",
+                  "label": "Bebê",
+                  "icon": "baby",
+                  "hint": "até 2 anos"
+                },
+                {
+                  "value": "crianca",
+                  "label": "Criança",
+                  "icon": "puzzle",
+                  "hint": "3 a 12 anos"
+                },
+                {
+                  "value": "adolescente",
+                  "label": "Adolescente",
+                  "icon": "gamepad",
+                  "hint": "13 a 17 anos"
+                },
+                {
+                  "value": "adulto",
+                  "label": "Adulto",
+                  "icon": "user"
+                },
+                {
+                  "value": "60",
+                  "label": "60+",
+                  "icon": "armchair"
+                }
+              ]
+            },
+            {
+              "id": "aumentar",
+              "label": "Pretendem aumentar a família?",
+              "icon": "user-plus",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "pets",
+              "type": "counts",
+              "label": "Têm animais de estimação?",
+              "hint": "Toque para incluir e ajuste a quantidade.",
+              "icon": "paw",
+              "max": 10,
+              "unit": [
+                "pet",
+                "pets"
+              ],
+              "options": [
+                {
+                  "value": "cachorro",
+                  "label": "Cachorro",
+                  "icon": "dog"
+                },
+                {
+                  "value": "gato",
+                  "label": "Gato",
+                  "icon": "cat"
+                },
+                {
+                  "value": "passaro",
+                  "label": "Pássaro",
+                  "icon": "bird"
+                },
+                {
+                  "value": "outro",
+                  "label": "Outro",
+                  "icon": "paw"
+                }
+              ],
+              "noneLabel": "Não temos",
+              "otherNote": "Qual animal?",
+              "tip": "Mande fotos dos seus pets no nosso grupo do WhatsApp. Isso ajuda a escolher tecidos, pisos e o cantinho deles."
+            }
+          ]
+        },
+        {
+          "id": "rotina",
+          "title": "Rotina e convivência",
+          "subtitle": "Cuidados da família, quem trabalha na casa e como vocês recebem.",
+          "questions": [
+            {
+              "id": "acessibilidade",
+              "label": "Alguma necessidade de acessibilidade, alergia ou condição de saúde a considerar?",
+              "icon": "accessibility",
+              "type": "text",
+              "placeholder": "Se não houver, pode pular"
+            },
+            {
+              "id": "funcionarios",
+              "label": "Quantos funcionários trabalham na casa?",
+              "icon": "briefcase",
+              "type": "number",
+              "min": 0,
+              "max": 8
+            },
+            {
+              "id": "tv",
+              "label": "Onde costumam assistir TV?",
+              "icon": "tv",
+              "type": "single",
+              "options": [
+                {
+                  "value": "na-sala",
+                  "label": "Na sala",
+                  "icon": "sofa"
+                },
+                {
+                  "value": "nos-quartos",
+                  "label": "Nos quartos",
+                  "icon": "bed"
+                },
+                {
+                  "value": "em-ambos",
+                  "label": "Em ambos",
+                  "icon": "house",
+                  "hint": "sala e quartos"
+                }
+              ],
+              "off": true
+            },
+            {
+              "off": true,
+              "id": "quem-cozinha",
+              "label": "Quem cozinha no dia a dia?",
+              "icon": "chef-hat",
+              "type": "single",
+              "options": [
+                {
+                  "value": "nos-mesmos",
+                  "label": "Nós mesmos",
+                  "icon": "users"
+                },
+                {
+                  "value": "funcionario-a",
+                  "label": "Funcionário(a)",
+                  "icon": "briefcase"
+                },
+                {
+                  "value": "os-dois",
+                  "label": "Os dois",
+                  "icon": "house"
+                },
+                {
+                  "value": "quase-ninguem",
+                  "label": "Quase ninguém",
+                  "icon": "coffee",
+                  "hint": "pedimos fora"
+                }
+              ]
+            },
+            {
+              "id": "home-office",
+              "label": "Alguém trabalha ou estuda em casa?",
+              "icon": "laptop",
+              "type": "single",
+              "options": [
+                {
+                  "value": "ninguem",
+                  "label": "Ninguém",
+                  "icon": "x"
+                },
+                {
+                  "value": "as-vezes",
+                  "label": "Às vezes",
+                  "icon": "calendar"
+                },
+                {
+                  "value": "todo-dia",
+                  "label": "Todo dia",
+                  "icon": "laptop"
+                }
+              ],
+              "note": "Quem e em que horário? (opcional)"
+            },
+            {
+              "id": "receber",
+              "label": "Gostam de receber amigos e família?",
+              "icon": "party",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "receber-qtd",
+              "label": "Quantas pessoas querem receber ao mesmo tempo, com conforto?",
+              "icon": "users",
+              "type": "single",
+              "options": [
+                {
+                  "value": "ate-8",
+                  "label": "Até 8"
+                },
+                {
+                  "value": "9-a-15",
+                  "label": "9 a 15"
+                },
+                {
+                  "value": "16-a-25",
+                  "label": "16 a 25"
+                },
+                {
+                  "value": "26-a-40",
+                  "label": "26 a 40"
+                },
+                {
+                  "value": "mais-de-40",
+                  "label": "Mais de 40"
+                }
+              ],
+              "hint": "Somando sala, varanda e cozinha.",
+              "showIf": {
+                "q": "receber",
+                "is": "sim"
+              }
+            },
+            {
+              "id": "hobby",
+              "label": "Algum hobby em comum?",
+              "icon": "heart",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "cozinhar",
+                  "label": "Cozinhar",
+                  "icon": "chef-hat"
+                },
+                {
+                  "value": "filmes-e-series",
+                  "label": "Filmes e séries",
+                  "icon": "popcorn"
+                },
+                {
+                  "value": "leitura",
+                  "label": "Leitura",
+                  "icon": "book"
+                },
+                {
+                  "value": "musica",
+                  "label": "Música",
+                  "icon": "music"
+                },
+                {
+                  "value": "games",
+                  "label": "Games",
+                  "icon": "gamepad"
+                },
+                {
+                  "value": "esportes",
+                  "label": "Esportes",
+                  "icon": "dumbbell"
+                },
+                {
+                  "value": "plantas",
+                  "label": "Plantas",
+                  "icon": "sprout"
+                },
+                {
+                  "value": "receber",
+                  "label": "Receber",
+                  "icon": "party"
+                },
+                {
+                  "value": "trabalhos-manuais",
+                  "label": "Trabalhos manuais",
+                  "icon": "hammer",
+                  "hint": "ferramentas, consertos"
+                },
+                {
+                  "value": "cuidar-do-carro",
+                  "label": "Cuidar do carro",
+                  "icon": "car",
+                  "hint": "lavar, polir, estética"
+                }
+              ],
+              "other": true,
+              "off": true
+            },
+            {
+              "id": "oficina",
+              "label": "Querem um cantinho com bancada e ferramentas?",
+              "icon": "hammer",
+              "type": "single",
+              "options": [
+                {
+                  "value": "na-varanda-ou-deck",
+                  "label": "Na varanda ou deck",
+                  "icon": "sun"
+                },
+                {
+                  "value": "na-area-de-servico",
+                  "label": "Na área de serviço",
+                  "icon": "washer"
+                },
+                {
+                  "value": "na-garagem",
+                  "label": "Na garagem",
+                  "icon": "car"
+                },
+                {
+                  "value": "um-comodo-so-para-isso",
+                  "label": "Um cômodo só para isso",
+                  "icon": "door-open"
+                },
+                {
+                  "value": "nao-precisa",
+                  "label": "Não precisa",
+                  "icon": "x"
+                }
+              ],
+              "hint": "Para trabalhos manuais, consertos ou marcenaria.",
+              "note": "O que costumam fazer? (opcional)",
+              "showIf": {
+                "q": "hobby",
+                "is": "trabalhos-manuais"
+              }
+            },
+            {
+              "id": "garagem",
+              "label": "O que prever na garagem para cuidar do carro?",
+              "icon": "car",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "ponto-de-agua",
+                  "label": "Ponto de água",
+                  "icon": "droplets",
+                  "hint": "torneira ou mangueira"
+                },
+                {
+                  "value": "tomada",
+                  "label": "Tomada",
+                  "icon": "plug",
+                  "hint": "aspirador, politriz"
+                },
+                {
+                  "value": "armario-para-produtos",
+                  "label": "Armário para produtos",
+                  "icon": "archive"
+                },
+                {
+                  "value": "boa-iluminacao",
+                  "label": "Boa iluminação",
+                  "icon": "bulb"
+                },
+                {
+                  "value": "nao-precisa",
+                  "label": "Não precisa",
+                  "icon": "x"
+                }
+              ],
+              "showIf": {
+                "q": "hobby",
+                "is": "cuidar-do-carro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "prefs",
+          "title": "O que importa para vocês",
+          "subtitle": "Isso orienta as decisões de layout, materiais e orçamento.",
+          "questions": [
+            {
+              "id": "valorizam",
+              "label": "E o que mais valorizam?",
+              "icon": "heart",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "conforto",
+                  "label": "Conforto"
+                },
+                {
+                  "value": "iluminacao-aconchegante",
+                  "label": "Iluminação aconchegante"
+                },
+                {
+                  "value": "praticidade",
+                  "label": "Praticidade"
+                },
+                {
+                  "value": "beleza",
+                  "label": "Beleza"
+                },
+                {
+                  "value": "integracao",
+                  "label": "Integração"
+                },
+                {
+                  "value": "contato-com-a-natureza",
+                  "label": "Contato com a natureza"
+                },
+                {
+                  "value": "tecnologia",
+                  "label": "Tecnologia"
+                },
+                {
+                  "value": "silencio",
+                  "label": "Silêncio"
+                }
+              ],
+              "other": true,
+              "off": true
+            },
+            {
+              "id": "incomoda",
+              "label": "O que mais incomoda vocês numa casa?",
+              "icon": "thumbs-down",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "bagunca-a-vista",
+                  "label": "Bagunça à vista"
+                },
+                {
+                  "value": "pouca-luz-natural",
+                  "label": "Pouca luz natural"
+                },
+                {
+                  "value": "calor",
+                  "label": "Calor"
+                },
+                {
+                  "value": "pouco-espaco-para-guardar",
+                  "label": "Pouco espaço para guardar"
+                },
+                {
+                  "value": "ambientes-apertados",
+                  "label": "Ambientes apertados"
+                },
+                {
+                  "value": "falta-de-privacidade",
+                  "label": "Falta de privacidade"
+                }
+              ],
+              "other": true
+            },
+            {
+              "id": "prioridades",
+              "label": "Se tivessem que escolher prioridades para investir mais, quais seriam?",
+              "icon": "gem",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "marcenaria",
+                  "label": "Marcenaria",
+                  "icon": "boxes"
+                },
+                {
+                  "value": "iluminacao",
+                  "label": "Iluminação",
+                  "icon": "bulb"
+                },
+                {
+                  "value": "moveis",
+                  "label": "Móveis",
+                  "icon": "sofa"
+                },
+                {
+                  "value": "revestimentos",
+                  "label": "Revestimentos",
+                  "icon": "layers"
+                },
+                {
+                  "value": "tecnologia",
+                  "label": "Tecnologia",
+                  "icon": "wifi"
+                },
+                {
+                  "value": "decoracao",
+                  "label": "Decoração",
+                  "icon": "frame"
+                }
+              ],
+              "max": 3,
+              "off": true
+            },
+            {
+              "id": "automacao",
+              "label": "Pretendem automatizar algo na casa?",
+              "icon": "wifi",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "iluminacao",
+                  "label": "Iluminação",
+                  "icon": "bulb"
+                },
+                {
+                  "value": "som",
+                  "label": "Som",
+                  "icon": "speaker"
+                },
+                {
+                  "value": "tv",
+                  "label": "TV",
+                  "icon": "tv"
+                },
+                {
+                  "value": "ar-condicionado",
+                  "label": "Ar-condicionado",
+                  "icon": "air-vent"
+                },
+                {
+                  "value": "cortinas",
+                  "label": "Cortinas",
+                  "icon": "blinds"
+                },
+                {
+                  "value": "seguranca",
+                  "label": "Segurança",
+                  "icon": "camera"
+                },
+                {
+                  "value": "ainda-nao-sei",
+                  "label": "Ainda não sei",
+                  "icon": "help",
+                  "hint": "vamos decidir com calma",
+                  "exclusive": true
+                }
+              ],
+              "hint": "Marque o que gostariam de controlar pelo celular ou por voz."
+            },
+            {
+              "id": "automacao-onde",
+              "label": "Onde querem automação?",
+              "icon": "house",
+              "type": "single",
+              "options": [
+                {
+                  "value": "na-casa-toda",
+                  "label": "Na casa toda",
+                  "icon": "house"
+                },
+                {
+                  "value": "so-em-alguns-ambientes",
+                  "label": "Só em alguns ambientes",
+                  "icon": "layers",
+                  "hint": "para focar o investimento"
+                }
+              ],
+              "showIf": {
+                "q": "automacao",
+                "is": [
+                  "iluminacao",
+                  "som",
+                  "tv",
+                  "ar-condicionado",
+                  "cortinas",
+                  "seguranca"
+                ]
+              }
+            },
+            {
+              "id": "automacao-ambientes",
+              "type": "multi",
+              "label": "Em quais ambientes?",
+              "icon": "layers",
+              "options": [],
+              "optionsFrom": "briefing",
+              "note": "Algum outro lugar? (opcional)",
+              "showIf": {
+                "q": "automacao-onde",
+                "is": "so-em-alguns-ambientes"
+              }
+            }
+          ]
+        },
+        {
+          "id": "estilo",
+          "title": "Gostos e materiais",
+          "subtitle": "Cores, texturas e o que já está definido para a casa.",
+          "questions": [
+            {
+              "id": "cores",
+              "label": "Que tons combinam mais com vocês?",
+              "icon": "palette",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "neutros",
+                  "label": "Neutros",
+                  "swatch": "linear-gradient(90deg,#f1ece3 0 25%,#d9cfc0 25% 50%,#b3a794 50% 75%,#7d7262 75%)"
+                },
+                {
+                  "value": "suaves",
+                  "label": "Suaves",
+                  "swatch": "linear-gradient(90deg,#efdcd2 0 25%,#d8e3d4 25% 50%,#d6dfea 50% 75%,#ece2c6 75%)"
+                },
+                {
+                  "value": "intensos",
+                  "label": "Intensos",
+                  "swatch": "linear-gradient(90deg,#b4472c 0 25%,#1f5d6b 25% 50%,#d39b2a 50% 75%,#3f6b3a 75%)"
+                }
+              ],
+              "note": "Alguma cor que amam ou não suportam? (opcional)"
+            },
+            {
+              "id": "amadeirado",
+              "label": "Gostam de madeira aparente?",
+              "icon": "trees",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim-bastante",
+                  "label": "Sim, bastante",
+                  "image": "img/opcoes/madeira_bastante.jpg",
+                  "hint": "paredes, teto ou móveis"
+                },
+                {
+                  "value": "so-um-detalhe",
+                  "label": "Só um detalhe",
+                  "image": "img/opcoes/madeira_detalhe.jpg",
+                  "hint": "um painel ou uma peça"
+                },
+                {
+                  "value": "prefiro-nao",
+                  "label": "Prefiro não",
+                  "image": "img/opcoes/madeira_sem.jpg",
+                  "hint": "sem madeira aparente"
+                }
+              ]
+            },
+            {
+              "id": "manutencao",
+              "label": "Na escolha dos materiais, o que pesa mais?",
+              "icon": "scale",
+              "type": "scale",
+              "left": {
+                "label": "Praticidade",
+                "icon": "timer"
+              },
+              "right": {
+                "label": "Sofisticação",
+                "icon": "gem"
+              },
+              "off": true
+            },
+            {
+              "id": "plantas",
+              "label": "Gostam de plantas dentro de casa?",
+              "icon": "sprout",
+              "type": "single",
+              "options": [
+                {
+                  "value": "muitas-naturais",
+                  "label": "Muitas naturais",
+                  "icon": "trees"
+                },
+                {
+                  "value": "algumas-naturais",
+                  "label": "Algumas naturais",
+                  "icon": "sprout"
+                },
+                {
+                  "value": "so-artificiais",
+                  "label": "Só artificiais",
+                  "icon": "flower",
+                  "hint": "sem cuidado diário"
+                },
+                {
+                  "value": "sem-plantas",
+                  "label": "Sem plantas",
+                  "icon": "x"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "arte",
+              "label": "Têm quadros ou coleções para expor?",
+              "icon": "frame",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim-varios",
+                  "label": "Sim, vários",
+                  "icon": "frame"
+                },
+                {
+                  "value": "alguns",
+                  "label": "Alguns",
+                  "icon": "square"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não",
+                  "icon": "x"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "moveis",
+              "label": "Algum móvel já está definido?",
+              "icon": "sofa",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "vamos-manter-alguns",
+                  "label": "Vamos manter alguns",
+                  "icon": "house",
+                  "hint": "da casa atual"
+                },
+                {
+                  "value": "ja-escolhemos-novos",
+                  "label": "Já escolhemos novos",
+                  "icon": "bag",
+                  "hint": "para comprar"
+                },
+                {
+                  "value": "ainda-nao",
+                  "label": "Ainda não",
+                  "icon": "x"
+                }
+              ],
+              "hint": "Móveis já definidos precisam ser enviados no nosso grupo do WhatsApp (fotos e medidas) para entrarem no projeto."
+            },
+            {
+              "id": "moveis-quais",
+              "label": "Quais móveis?",
+              "icon": "armchair",
+              "type": "text",
+              "placeholder": "Ex.: sofá, mesa de jantar, cama, aparador",
+              "multiline": true,
+              "showIf": {
+                "q": "moveis",
+                "is": [
+                  "vamos-manter-alguns",
+                  "ja-escolhemos-novos"
+                ]
+              },
+              "tip": "Importante: envie fotos e medidas desses móveis no nosso grupo do WhatsApp. Precisamos delas para considerar cada peça no projeto."
+            },
+            {
+              "id": "desejo",
+              "label": "Algum desejo especial para a casa nova?",
+              "icon": "sparkles",
+              "type": "text",
+              "multiline": true,
+              "placeholder": "Aquele detalhe que vocês sempre quiseram ter."
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hall",
+      "name": "Hall de entrada",
+      "kicker": "Chegada · Acolhimento · Identidade",
+      "intro": "O primeiro contato com a casa deve combinar acolhimento, funcionalidade e identidade.",
+      "cover": "img/capas/hall.jpg",
+      "images": [],
+      "groups": [
+        {
+          "id": "hall",
+          "title": "Hall de entrada",
+          "subtitle": "O primeiro contato com a casa.",
+          "questions": [
+            {
+              "id": "transmitir",
+              "label": "O que o hall deve transmitir?",
+              "icon": "door-open",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "acolhimento",
+                  "label": "Acolhimento",
+                  "icon": "heart"
+                },
+                {
+                  "value": "sofisticacao",
+                  "label": "Sofisticação",
+                  "icon": "gem"
+                },
+                {
+                  "value": "praticidade",
+                  "label": "Praticidade",
+                  "icon": "timer"
+                },
+                {
+                  "value": "impacto-visual",
+                  "label": "Impacto visual",
+                  "icon": "sparkles"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "sapatos",
+              "label": "Pedem para tirar os sapatos na entrada?",
+              "icon": "footprints",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "movel",
+              "label": "Querem um móvel para sapatos, bolsas e chaves?",
+              "icon": "archive",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "fechadura",
+              "label": "Fechadura eletrônica?",
+              "icon": "key",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "espelho",
+              "label": "Espelho no hall, para a última olhada antes de sair?",
+              "icon": "mirror",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sala",
+      "name": "Sala de estar e jantar",
+      "kicker": "Convivência · Receber · Relaxar",
+      "intro": "Um espaço pensado a partir da rotina, das preferências e das prioridades de quem vai viver aqui.",
+      "cover": "img/capas/sala.jpg",
+      "deckPrompt": "Composição, materiais e detalhes para a sala.",
+      "images": [
+        {
+          "id": "sala-01",
+          "src": "img/sala/01.jpg",
+          "tags": [
+            "minimalista",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-02",
+          "src": "img/sala/02.jpg",
+          "tags": [
+            "iluminacao",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-03",
+          "src": "img/sala/03.jpg",
+          "tags": [
+            "industrial",
+            "natural",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-04",
+          "src": "img/sala/04.jpg",
+          "tags": [
+            "escuro",
+            "iluminacao"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-05",
+          "src": "img/sala/05.jpg",
+          "tags": [
+            "claro",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-06",
+          "src": "img/sala/06.jpg",
+          "tags": [
+            "natural",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-07",
+          "src": "img/sala/07.jpg",
+          "tags": [
+            "classico",
+            "claro",
+            "dourado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-08",
+          "src": "img/sala/08.jpg",
+          "tags": [
+            "industrial",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-09",
+          "src": "img/sala/09.jpg",
+          "tags": [
+            "claro",
+            "natural",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-10",
+          "src": "img/sala/10.jpg",
+          "tags": [
+            "cor",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-11",
+          "src": "img/sala/11.jpg",
+          "tags": [
+            "natural",
+            "industrial"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-12",
+          "src": "img/sala/12.jpg",
+          "tags": [
+            "cor",
+            "natural",
+            "industrial"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-13",
+          "src": "img/sala/13.jpg",
+          "tags": [
+            "amadeirado",
+            "natural",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-14",
+          "src": "img/sala/14.jpg",
+          "tags": [
+            "pedra",
+            "amadeirado",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-15",
+          "src": "img/sala/15.jpg",
+          "tags": [
+            "cor",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-16",
+          "src": "img/sala/16.jpg",
+          "tags": [
+            "amadeirado",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-17",
+          "src": "img/sala/17.jpg",
+          "tags": [
+            "pedra",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-18",
+          "src": "img/sala/18.jpg",
+          "tags": [
+            "pedra",
+            "amadeirado",
+            "iluminacao"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-19",
+          "src": "img/sala/19.jpg",
+          "tags": [
+            "amadeirado",
+            "pedra"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-20",
+          "src": "img/sala/20.jpg",
+          "tags": [
+            "pedra",
+            "escuro",
+            "iluminacao"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-21",
+          "src": "img/sala/21.jpg",
+          "tags": [
+            "escuro",
+            "industrial"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-22",
+          "src": "img/sala/22.jpg",
+          "tags": [
+            "iluminacao",
+            "escuro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-23",
+          "src": "img/sala/23.jpg",
+          "tags": [
+            "classico",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "sala-24",
+          "src": "img/sala/24.jpg",
+          "tags": [
+            "classico",
+            "dourado",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        }
+      ],
+      "groups": [
+        {
+          "id": "uso",
+          "title": "Como vocês usam a sala?",
+          "subtitle": "Isso define layout, capacidade e o nível de formalidade.",
+          "questions": [
+            {
+              "id": "tv-familia",
+              "label": "A família se reúne para ver TV?",
+              "icon": "tv",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "visitas",
+              "label": "Onde preferem receber visitas?",
+              "icon": "users",
+              "type": "single",
+              "options": [
+                {
+                  "value": "na-sala",
+                  "label": "Na sala",
+                  "icon": "sofa"
+                },
+                {
+                  "value": "na-varanda",
+                  "label": "Na varanda",
+                  "icon": "sun"
+                },
+                {
+                  "value": "em-ambos",
+                  "label": "Em ambos",
+                  "icon": "house",
+                  "hint": "sala e varanda"
+                }
+              ]
+            },
+            {
+              "id": "receber-qtd",
+              "label": "Quantas pessoas querem receber com conforto?",
+              "icon": "users",
+              "type": "number",
+              "min": 2,
+              "max": 40,
+              "step": 2,
+              "skipIfBriefingHas": "geral"
+            },
+            {
+              "id": "lugares-mesa",
+              "label": "Quantos lugares na mesa de jantar?",
+              "icon": "cutlery",
+              "type": "single",
+              "options": [
+                {
+                  "value": "4",
+                  "label": "4"
+                },
+                {
+                  "value": "6",
+                  "label": "6"
+                },
+                {
+                  "value": "8",
+                  "label": "8"
+                },
+                {
+                  "value": "10",
+                  "label": "10"
+                },
+                {
+                  "value": "12",
+                  "label": "12"
+                },
+                {
+                  "value": "o-maximo-que-o-espaco-comportar",
+                  "label": "O máximo que o espaço comportar",
+                  "icon": "ruler",
+                  "exclusive": true
+                }
+              ],
+              "pills": true
+            },
+            {
+              "id": "mesa-formato",
+              "label": "Formato da mesa de jantar",
+              "icon": "cutlery",
+              "type": "single",
+              "options": [
+                {
+                  "value": "redonda",
+                  "label": "Redonda",
+                  "art": "mesa-redonda"
+                },
+                {
+                  "value": "retangular",
+                  "label": "Retangular",
+                  "art": "mesa-retangular"
+                },
+                {
+                  "value": "quadrada",
+                  "label": "Quadrada",
+                  "art": "mesa-quadrada"
+                },
+                {
+                  "value": "oval",
+                  "label": "Oval",
+                  "art": "mesa-oval"
+                },
+                {
+                  "value": "organica",
+                  "label": "Orgânica",
+                  "art": "mesa-organica",
+                  "hint": "formas livres, como as de mármore"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor no espaço"
+                }
+              ]
+            },
+            {
+              "id": "linguagem",
+              "label": "Que linguagem combina mais?",
+              "icon": "clock",
+              "type": "scale",
+              "left": {
+                "label": "Atual",
+                "icon": "sparkles"
+              },
+              "right": {
+                "label": "Atemporal",
+                "icon": "clock"
+              },
+              "off": true
+            },
+            {
+              "id": "luz",
+              "label": "Que clima de luz combina mais?",
+              "icon": "bulb",
+              "type": "single",
+              "options": [
+                {
+                  "value": "clara",
+                  "label": "Clara",
+                  "swatch": "radial-gradient(circle at 50% 0%, #ffffff 0%, #eef4fb 55%, #cfdcec 100%)",
+                  "hint": "luz branca, funcional"
+                },
+                {
+                  "value": "aconchegante",
+                  "label": "Aconchegante",
+                  "swatch": "radial-gradient(circle at 50% 0%, #ffe2ad 0%, #e6a45c 45%, #6b4426 100%)",
+                  "hint": "luz amarela, indireta"
+                },
+                {
+                  "value": "com-cenas",
+                  "label": "Com cenas",
+                  "swatch": "linear-gradient(90deg, #eef4fb 0 33%, #f5c886 33% 66%, #5b3d2a 66%)",
+                  "hint": "muda conforme o momento"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "cortinas",
+              "label": "Cortina ou persiana?",
+              "icon": "blinds",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "cortina-de-tecido",
+                  "label": "Cortina de tecido",
+                  "icon": "wind"
+                },
+                {
+                  "value": "persiana",
+                  "label": "Persiana",
+                  "icon": "blinds"
+                },
+                {
+                  "value": "blackout",
+                  "label": "Blackout",
+                  "icon": "moon"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "icon": "architect",
+                  "exclusive": true
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "movel-especifico",
+              "label": "Algum móvel ou peça que precisa entrar no projeto?",
+              "icon": "armchair",
+              "type": "text",
+              "placeholder": "Ex.: piano, aparador da família, quadro grande",
+              "skipIfBriefingHas": "geral"
+            },
+            {
+              "id": "mantido",
+              "label": "Algum móvel ou equipamento será mantido?",
+              "icon": "package",
+              "type": "text",
+              "placeholder": "Se puder, mande fotos e medidas depois",
+              "skipIfBriefingHas": "geral"
+            }
+          ]
+        },
+        {
+          "id": "equip",
+          "title": "Tecnologia e equipamentos",
+          "subtitle": "O que precisa de ponto elétrico, espaço ou infraestrutura.",
+          "questions": [
+            {
+              "id": "equip",
+              "label": "O que deve ser previsto na sala?",
+              "icon": "plug",
+              "type": "checklist",
+              "items": [
+                {
+                  "id": "tv",
+                  "label": "TV",
+                  "hint": "Tamanho em polegadas",
+                  "icon": "tv",
+                  "choices": [
+                    "42\"",
+                    "50\"",
+                    "60\"",
+                    "65\"",
+                    "70\"",
+                    "75\"",
+                    "85\""
+                  ]
+                },
+                {
+                  "id": "home-theater-ou-soundbar",
+                  "label": "Home theater ou soundbar",
+                  "hint": "Marca / configuração",
+                  "icon": "speaker"
+                },
+                {
+                  "id": "som-embutido",
+                  "label": "Som embutido",
+                  "hint": "Teto, parede ou piso",
+                  "icon": "volume"
+                },
+                {
+                  "id": "videogame",
+                  "label": "Videogame",
+                  "hint": "Console / acessórios",
+                  "icon": "gamepad"
+                },
+                {
+                  "id": "automacao",
+                  "label": "Automação",
+                  "hint": "Quais funções?",
+                  "icon": "wifi"
+                },
+                {
+                  "id": "adega",
+                  "label": "Adega",
+                  "hint": "Capacidade / embutida ou solta",
+                  "icon": "wine"
+                },
+                {
+                  "id": "bancada-de-bar",
+                  "label": "Bancada de bar",
+                  "hint": "Copos, garrafas, coqueteleira",
+                  "icon": "bar"
+                },
+                {
+                  "id": "cantinho-do-cafe",
+                  "label": "Cantinho do café",
+                  "hint": "Cafeteira, xícaras, cápsulas",
+                  "icon": "coffee"
+                },
+                {
+                  "id": "estante-armario",
+                  "label": "Estante / armário",
+                  "hint": "O que precisa guardar?",
+                  "icon": "boxes"
+                },
+                {
+                  "id": "ar-condicionado",
+                  "label": "Ar-condicionado",
+                  "hint": "Modelo, se já tiver",
+                  "icon": "air-vent"
+                },
+                {
+                  "id": "outros-eletronicos",
+                  "label": "Outros eletrônicos",
+                  "hint": "Quais?",
+                  "icon": "plug"
+                }
+              ]
+            },
+            {
+              "id": "ar-tipo",
+              "label": "Que tipo de ar-condicionado preferem?",
+              "icon": "air-vent",
+              "type": "single",
+              "options": [
+                {
+                  "value": "split",
+                  "label": "Split",
+                  "art": "ar-split",
+                  "hint": "aparelho na parede"
+                },
+                {
+                  "value": "cassete",
+                  "label": "Cassete",
+                  "art": "ar-cassete",
+                  "hint": "embutido no teto"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor no espaço",
+                  "exclusive": true
+                }
+              ],
+              "showIf": {
+                "q": "equip",
+                "is": "ar-condicionado"
+              }
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cozinha",
+      "name": "Cozinha",
+      "kicker": "Rotina · Preparo · Organização",
+      "intro": "Um espaço pensado a partir da rotina, das preferências e das prioridades de quem vai viver aqui.",
+      "cover": "img/capas/cozinha.jpg",
+      "deckPrompt": "Estilo e composição para a cozinha.",
+      "images": [
+        {
+          "id": "cozinha-01",
+          "src": "img/cozinha/01.jpg",
+          "tags": [
+            "cor",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-02",
+          "src": "img/cozinha/02.jpg",
+          "tags": [
+            "industrial",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-03",
+          "src": "img/cozinha/03.jpg",
+          "tags": [
+            "pedra",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-04",
+          "src": "img/cozinha/04.jpg",
+          "tags": [
+            "pedra",
+            "claro",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-05",
+          "src": "img/cozinha/05.jpg",
+          "tags": [
+            "escuro",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-06",
+          "src": "img/cozinha/06.jpg",
+          "tags": [
+            "amadeirado",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-07",
+          "src": "img/cozinha/07.jpg",
+          "tags": [
+            "cor",
+            "industrial"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-08",
+          "src": "img/cozinha/08.jpg",
+          "tags": [
+            "amadeirado",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-09",
+          "src": "img/cozinha/09.jpg",
+          "tags": [
+            "amadeirado",
+            "cor",
+            "escuro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-10",
+          "src": "img/cozinha/10.jpg",
+          "tags": [
+            "cor",
+            "industrial"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-11",
+          "src": "img/cozinha/11.jpg",
+          "tags": [
+            "pedra",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-12",
+          "src": "img/cozinha/12.jpg",
+          "tags": [
+            "cor",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-13",
+          "src": "img/cozinha/13.jpg",
+          "tags": [
+            "classico",
+            "dourado",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-14",
+          "src": "img/cozinha/14.jpg",
+          "tags": [
+            "amadeirado",
+            "natural",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-15",
+          "src": "img/cozinha/15.jpg",
+          "tags": [
+            "amadeirado",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-16",
+          "src": "img/cozinha/16.jpg",
+          "tags": [
+            "amadeirado",
+            "cor",
+            "dourado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-17",
+          "src": "img/cozinha/17.jpg",
+          "tags": [
+            "minimalista",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-18",
+          "src": "img/cozinha/18.jpg",
+          "tags": [
+            "escuro",
+            "amadeirado",
+            "pedra"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-19",
+          "src": "img/cozinha/19.jpg",
+          "tags": [
+            "industrial",
+            "escuro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-20",
+          "src": "img/cozinha/20.jpg",
+          "tags": [
+            "iluminacao",
+            "escuro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "cozinha-21",
+          "src": "img/cozinha/21.jpg",
+          "tags": [
+            "pedra",
+            "amadeirado",
+            "iluminacao"
+          ],
+          "theme": "Estilo e composição"
+        }
+      ],
+      "groups": [
+        {
+          "id": "bancada",
+          "title": "Bancada, cuba e metais",
+          "subtitle": "Pedra, cuba e acabamentos. A especificação técnica a gente compatibiliza no projeto.",
+          "questions": [
+            {
+              "id": "material",
+              "label": "Pedra da bancada",
+              "icon": "layers",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "super-nano",
+                  "label": "Super Nano",
+                  "image": "img/opcoes/pedra_super_nano.jpg",
+                  "hint": "branco liso"
+                },
+                {
+                  "value": "sao-gabriel-escovado",
+                  "label": "São Gabriel escovado",
+                  "image": "img/opcoes/pedra_sao_gabriel.jpg",
+                  "hint": "granito preto, textura fosca"
+                },
+                {
+                  "value": "perla-santana",
+                  "label": "Perla Santana",
+                  "image": "img/opcoes/pedra_perla_santana.jpg",
+                  "hint": "quartzito bege acinzentado com veios"
+                },
+                {
+                  "value": "travertino",
+                  "label": "Travertino",
+                  "image": "img/opcoes/travertino.jpg",
+                  "hint": "bege, com poros e veios aparentes"
+                },
+                {
+                  "value": "detalhes-em-onix-iluminado",
+                  "label": "Detalhes em ônix iluminado",
+                  "image": "img/opcoes/onix.jpg",
+                  "hint": "pedra translúcida com luz por trás"
+                },
+                {
+                  "value": "outra",
+                  "label": "Outra",
+                  "icon": "help"
+                }
+              ]
+            },
+            {
+              "id": "cuba",
+              "label": "Tipo de cuba",
+              "icon": "droplets",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "unica",
+                  "label": "Única",
+                  "art": "cuba-unica"
+                },
+                {
+                  "value": "dupla",
+                  "label": "Dupla",
+                  "art": "cuba-dupla"
+                },
+                {
+                  "value": "esculpida",
+                  "label": "Esculpida",
+                  "art": "cuba-esculpida",
+                  "hint": "na própria pedra"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "calha",
+              "label": "Calha úmida na bancada?",
+              "icon": "droplets",
+              "hint": "Um rebaixo na pedra, ao lado da cuba, para escorrer a louça e deixar temperos à mão.",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ],
+              "figure": {
+                "art": "calha-umida",
+                "caption": "Vista de cima: a calha fica atrás da cuba, rebaixada na pedra."
+              }
+            },
+            {
+              "id": "escorredor",
+              "label": "Sem a calha, como preferem escorrer a louça?",
+              "icon": "layers",
+              "type": "single",
+              "options": [
+                {
+                  "value": "escorredor-aparente",
+                  "label": "Escorredor aparente",
+                  "icon": "layers",
+                  "hint": "sobre a bancada"
+                },
+                {
+                  "value": "escorredor-no-armario",
+                  "label": "Escorredor no armário",
+                  "icon": "archive",
+                  "hint": "em cima da cuba"
+                },
+                {
+                  "value": "nao-precisa",
+                  "label": "Não precisa",
+                  "icon": "x",
+                  "hint": "usamos a lava-louças"
+                }
+              ],
+              "showIf": {
+                "q": "calha",
+                "is": "nao"
+              }
+            },
+            {
+              "id": "metais",
+              "label": "Acabamento dos metais",
+              "icon": "sparkle",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "dourado",
+                  "label": "Dourado",
+                  "swatch": "linear-gradient(135deg,#f3e2b0 0%,#c9a157 45%,#9c7535 70%,#e8cf8e 100%)"
+                },
+                {
+                  "value": "preto",
+                  "label": "Preto",
+                  "swatch": "linear-gradient(135deg,#4a4a4a 0%,#161616 55%,#2d2d2d 100%)"
+                },
+                {
+                  "value": "inox",
+                  "label": "Inox",
+                  "swatch": "linear-gradient(135deg,#f7f8f9 0%,#b7bcc1 45%,#8f959b 65%,#e4e7ea 100%)"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "icon": "architect",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "embutidos",
+              "label": "Algo embutido na bancada?",
+              "icon": "plug",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "dispenser-de-detergente",
+                  "label": "Dispenser de detergente",
+                  "art": "dispenser",
+                  "hint": "ao lado da cuba, refil por baixo"
+                },
+                {
+                  "value": "torre-de-tomadas",
+                  "label": "Torre de tomadas",
+                  "art": "torre-tomadas",
+                  "hint": "sobe quando precisa, some na pedra"
+                },
+                {
+                  "value": "nao-precisa",
+                  "label": "Não precisa",
+                  "icon": "x"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar modelos ou observações",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Modelos já escolhidos, medidas ou outros detalhes."
+            }
+          ]
+        },
+        {
+          "id": "equip",
+          "title": "Equipamentos",
+          "subtitle": "O que entra na cozinha define pontos de gás, elétrica, água e exaustão.",
+          "questions": [
+            {
+              "id": "frequencia",
+              "label": "Com que frequência cozinham em casa?",
+              "icon": "pot",
+              "type": "single",
+              "options": [
+                {
+                  "value": "todo-dia",
+                  "label": "Todo dia",
+                  "icon": "flame"
+                },
+                {
+                  "value": "algumas-vezes-por-semana",
+                  "label": "Algumas vezes por semana",
+                  "icon": "calendar"
+                },
+                {
+                  "value": "raramente",
+                  "label": "Raramente",
+                  "icon": "coffee"
+                }
+              ]
+            },
+            {
+              "id": "coccao",
+              "label": "O que deve ser previsto?",
+              "icon": "flame",
+              "type": "checklist",
+              "items": [
+                {
+                  "id": "cooktop-a-gas",
+                  "label": "Cooktop a gás",
+                  "hint": "Número de bocas",
+                  "icon": "flame"
+                },
+                {
+                  "id": "cooktop-de-inducao",
+                  "label": "Cooktop de indução",
+                  "hint": "Verificar carga elétrica",
+                  "icon": "zap"
+                },
+                {
+                  "id": "fogao-de-piso",
+                  "label": "Fogão de piso",
+                  "hint": "Modelo / largura",
+                  "icon": "flame"
+                },
+                {
+                  "id": "fogao-de-embutir",
+                  "label": "Fogão de embutir",
+                  "hint": "Modelo / largura",
+                  "icon": "flame"
+                },
+                {
+                  "id": "forno-eletrico",
+                  "label": "Forno elétrico",
+                  "hint": "Modelo e dimensões",
+                  "icon": "zap"
+                },
+                {
+                  "id": "forno-a-gas",
+                  "label": "Forno a gás",
+                  "hint": "Modelo e dimensões",
+                  "icon": "flame"
+                },
+                {
+                  "id": "micro-ondas",
+                  "label": "Micro-ondas",
+                  "hint": "Solto ou embutido",
+                  "icon": "microwave"
+                },
+                {
+                  "id": "coifa-de-parede",
+                  "label": "Coifa de parede",
+                  "hint": "Largura",
+                  "icon": "wind"
+                },
+                {
+                  "id": "coifa-de-ilha",
+                  "label": "Coifa de ilha",
+                  "hint": "Largura",
+                  "icon": "wind"
+                },
+                {
+                  "id": "depurador",
+                  "label": "Depurador",
+                  "hint": "Sem duto externo",
+                  "icon": "fan"
+                }
+              ]
+            },
+            {
+              "id": "bocas",
+              "label": "Quantas bocas?",
+              "icon": "flame",
+              "type": "number",
+              "min": 2,
+              "max": 6,
+              "showIf": {
+                "q": "coccao",
+                "is": [
+                  "cooktop-a-gas",
+                  "cooktop-de-inducao",
+                  "fogao-de-piso",
+                  "fogao-de-embutir"
+                ]
+              }
+            },
+            {
+              "id": "equip",
+              "label": "O que vai ter na cozinha?",
+              "icon": "plug",
+              "type": "checklist",
+              "items": [
+                {
+                  "id": "geladeira",
+                  "label": "Geladeira",
+                  "hint": "Tipo, modelo e dimensões",
+                  "icon": "fridge"
+                },
+                {
+                  "id": "freezer",
+                  "label": "Freezer",
+                  "hint": "Vertical ou horizontal",
+                  "icon": "snowflake"
+                },
+                {
+                  "id": "lava-loucas",
+                  "label": "Lava-louças",
+                  "hint": "Capacidade / modelo",
+                  "icon": "droplets"
+                },
+                {
+                  "id": "triturador-de-residuos",
+                  "label": "Triturador de resíduos",
+                  "hint": "Sob a cuba",
+                  "icon": "recycle"
+                },
+                {
+                  "id": "tv",
+                  "label": "TV",
+                  "hint": "Tamanho / modelo",
+                  "icon": "tv"
+                },
+                {
+                  "id": "ar-condicionado",
+                  "label": "Ar-condicionado",
+                  "hint": "Modelo, se já tiver",
+                  "icon": "air-vent"
+                }
+              ]
+            },
+            {
+              "id": "ar-tipo",
+              "label": "Que tipo de ar-condicionado preferem?",
+              "icon": "air-vent",
+              "type": "single",
+              "options": [
+                {
+                  "value": "split",
+                  "label": "Split",
+                  "art": "ar-split",
+                  "hint": "aparelho na parede"
+                },
+                {
+                  "value": "cassete",
+                  "label": "Cassete",
+                  "art": "ar-cassete",
+                  "hint": "embutido no teto"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor no espaço",
+                  "exclusive": true
+                }
+              ],
+              "showIf": {
+                "q": "equip",
+                "is": "ar-condicionado"
+              }
+            },
+            {
+              "id": "agua",
+              "label": "Água filtrada",
+              "icon": "glass",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "gelagua-de-torre",
+                  "label": "Gelágua de torre"
+                },
+                {
+                  "value": "gelagua-de-bancada",
+                  "label": "Gelágua de bancada"
+                },
+                {
+                  "value": "filtro-na-torneira",
+                  "label": "Filtro na torneira"
+                },
+                {
+                  "value": "filtro-da-geladeira",
+                  "label": "Filtro da geladeira"
+                }
+              ]
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar modelos ou observações",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Modelos, dimensões ou outros detalhes."
+            }
+          ]
+        },
+        {
+          "id": "organizacao",
+          "title": "Organização e armazenamento",
+          "subtitle": "O que fica à vista e onde cada coisa é guardada.",
+          "questions": [
+            {
+              "id": "mostra",
+              "label": "O que fica à mostra na cozinha?",
+              "icon": "eye",
+              "type": "single",
+              "options": [
+                {
+                  "value": "tudo-guardado",
+                  "label": "Tudo guardado",
+                  "image": "img/opcoes/cozinha_guardado.jpg",
+                  "hint": "portas fechadas, visual limpo"
+                },
+                {
+                  "value": "um-pouco-de-cada",
+                  "label": "Um pouco de cada",
+                  "image": "img/opcoes/cozinha_um_pouco.jpg",
+                  "hint": "algumas portas de vidro"
+                },
+                {
+                  "value": "bastante-a-mostra",
+                  "label": "Bastante à mostra",
+                  "image": "img/opcoes/cozinha_mostra.jpg",
+                  "hint": "vidro com luz, taças e louças expostas"
+                }
+              ],
+              "hint": "Ajuda a definir quanto vidro e iluminação usar nos armários."
+            },
+            {
+              "id": "lixeira",
+              "label": "Lixeira",
+              "icon": "trash",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "de-piso",
+                  "label": "De piso",
+                  "art": "lixeira-piso",
+                  "hint": "solta, com pedal"
+                },
+                {
+                  "value": "embutida-na-bancada",
+                  "label": "Embutida na bancada",
+                  "art": "lixeira-bancada",
+                  "hint": "abertura na pedra, cesto embaixo"
+                },
+                {
+                  "value": "embutida-na-marcenaria",
+                  "label": "Embutida na marcenaria",
+                  "art": "lixeira-marcenaria",
+                  "hint": "gaveta com cestos, inclusive reciclável"
+                }
+              ]
+            },
+            {
+              "id": "despensa",
+              "label": "Espaço para estoque de mantimentos?",
+              "icon": "package",
+              "type": "single",
+              "options": [
+                {
+                  "value": "despensa-separada",
+                  "label": "Despensa separada",
+                  "icon": "door-open"
+                },
+                {
+                  "value": "armario-alto",
+                  "label": "Armário alto",
+                  "icon": "archive"
+                },
+                {
+                  "value": "nao-precisa",
+                  "label": "Não precisa",
+                  "icon": "x"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "fruteira",
+              "label": "Fruteira",
+              "icon": "apple",
+              "type": "single",
+              "options": [
+                {
+                  "value": "aparente",
+                  "label": "Aparente",
+                  "art": "fruteira-aparente",
+                  "hint": "sobre a bancada"
+                },
+                {
+                  "value": "embutida",
+                  "label": "Embutida",
+                  "art": "fruteira-embutida",
+                  "hint": "nicho ou gaveta na marcenaria"
+                },
+                {
+                  "value": "nao-precisa",
+                  "label": "Não precisa",
+                  "icon": "x"
+                }
+              ],
+              "off": true
+            },
+            {
+              "off": true,
+              "id": "refeicoes",
+              "label": "Querem um cantinho na cozinha para refeições rápidas?",
+              "icon": "coffee",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "sim-numa-ilha-ou-bancada",
+                  "label": "Sim, numa ilha ou bancada",
+                  "icon": "square",
+                  "hint": "ou península"
+                },
+                {
+                  "value": "nao-usamos-a-mesa-de-jantar",
+                  "label": "Não, usamos a mesa de jantar",
+                  "icon": "cutlery"
+                },
+                {
+                  "value": "nao-usamos-o-deck-ou-a-varanda",
+                  "label": "Não, usamos o deck ou a varanda",
+                  "icon": "sun"
+                }
+              ],
+              "hint": "Café da manhã, lanche, uma refeição a dois. Se o espaço permitir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gourmet",
+      "name": "Varanda gourmet",
+      "kicker": "Receber · Cozinhar · Celebrar",
+      "intro": "Um espaço pensado a partir da rotina, das preferências e das prioridades de quem vai viver aqui.",
+      "cover": "img/capas/gourmet.jpg",
+      "deckPrompt": "Churrasqueira, uso e atmosfera da área gourmet.",
+      "images": [
+        {
+          "id": "gourmet-01",
+          "src": "img/gourmet/01.jpg",
+          "tags": [
+            "escuro",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-02",
+          "src": "img/gourmet/02.jpg",
+          "tags": [
+            "claro",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-03",
+          "src": "img/gourmet/03.jpg",
+          "tags": [
+            "claro",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-04",
+          "src": "img/gourmet/04.jpg",
+          "tags": [
+            "amadeirado",
+            "pedra",
+            "iluminacao"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-05",
+          "src": "img/gourmet/05.jpg",
+          "tags": [
+            "natural",
+            "pedra",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-06",
+          "src": "img/gourmet/06.jpg",
+          "tags": [
+            "amadeirado",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-07",
+          "src": "img/gourmet/07.jpg",
+          "tags": [
+            "pedra",
+            "natural",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-08",
+          "src": "img/gourmet/08.jpg",
+          "tags": [
+            "natural",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-09",
+          "src": "img/gourmet/09.jpg",
+          "tags": [
+            "amadeirado",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-10",
+          "src": "img/gourmet/10.jpg",
+          "tags": [
+            "pedra",
+            "natural",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-11",
+          "src": "img/gourmet/11.jpg",
+          "tags": [
+            "cor",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-12",
+          "src": "img/gourmet/12.jpg",
+          "tags": [
+            "claro",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-13",
+          "src": "img/gourmet/13.jpg",
+          "tags": [
+            "amadeirado",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-14",
+          "src": "img/gourmet/14.jpg",
+          "tags": [
+            "pedra",
+            "industrial",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-15",
+          "src": "img/gourmet/15.jpg",
+          "tags": [
+            "minimalista",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-16",
+          "src": "img/gourmet/16.jpg",
+          "tags": [
+            "amadeirado",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-17",
+          "src": "img/gourmet/17.jpg",
+          "tags": [
+            "industrial",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-18",
+          "src": "img/gourmet/18.jpg",
+          "tags": [
+            "natural",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-19",
+          "src": "img/gourmet/19.jpg",
+          "tags": [
+            "claro",
+            "natural",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "gourmet-20",
+          "src": "img/gourmet/20.jpg",
+          "tags": [
+            "cor",
+            "industrial"
+          ],
+          "theme": "Estilo e composição"
+        }
+      ],
+      "groups": [
+        {
+          "id": "uso",
+          "title": "Como vocês usam a área gourmet?",
+          "subtitle": "Capacidade, fechamento e paisagismo.",
+          "questions": [
+            {
+              "id": "uso",
+              "label": "Para que vão usar mais?",
+              "icon": "party",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "churrasco-com-amigos",
+                  "label": "Churrasco com amigos",
+                  "icon": "beer"
+                },
+                {
+                  "value": "almoco-em-familia",
+                  "label": "Almoço em família",
+                  "icon": "cutlery"
+                },
+                {
+                  "value": "festas",
+                  "label": "Festas",
+                  "icon": "party"
+                },
+                {
+                  "value": "descanso",
+                  "label": "Descanso",
+                  "icon": "sun"
+                }
+              ]
+            },
+            {
+              "id": "churrasqueira",
+              "label": "Tipo de churrasqueira",
+              "icon": "flame",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "carvao",
+                  "label": "Carvão",
+                  "icon": "flame",
+                  "hint": "tradicional ou parrilla"
+                },
+                {
+                  "value": "gas",
+                  "label": "Gás",
+                  "icon": "pot",
+                  "hint": "embutida ou de bancada"
+                },
+                {
+                  "value": "eletrica",
+                  "label": "Elétrica",
+                  "icon": "zap",
+                  "hint": "compacta, pouca fumaça"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "icon": "architect",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "receber",
+              "label": "Quantas pessoas querem receber com conforto?",
+              "icon": "users",
+              "type": "number",
+              "min": 2,
+              "max": 60,
+              "step": 2,
+              "skipIfBriefingHas": "geral"
+            },
+            {
+              "id": "vidro",
+              "label": "Fechamento em vidro?",
+              "icon": "wind",
+              "hint": "Protege do vento e da chuva sem perder a vista.",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "vegetacao",
+              "label": "Plantas naturais integradas?",
+              "icon": "sprout",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "movel",
+              "label": "Algum móvel ou elemento que precisa entrar?",
+              "icon": "armchair",
+              "type": "text",
+              "off": true
+            }
+          ]
+        },
+        {
+          "id": "equip",
+          "title": "Equipamentos e apoio",
+          "subtitle": "Marque o que deve ser previsto no projeto.",
+          "questions": [
+            {
+              "id": "equip",
+              "label": "O que vai ter na varanda?",
+              "icon": "plug",
+              "type": "checklist",
+              "items": [
+                {
+                  "id": "tv",
+                  "label": "TV",
+                  "hint": "Tamanho / modelo",
+                  "icon": "tv"
+                },
+                {
+                  "id": "som-ambiente",
+                  "label": "Som ambiente",
+                  "hint": "Teto, parede ou piso",
+                  "icon": "speaker"
+                },
+                {
+                  "id": "automacao",
+                  "label": "Automação",
+                  "hint": "Iluminação, áudio, cortinas",
+                  "icon": "wifi"
+                },
+                {
+                  "id": "projetor-externo",
+                  "label": "Projetor externo",
+                  "hint": "Com tela ou projeção na parede",
+                  "icon": "projector"
+                },
+                {
+                  "id": "sofa",
+                  "label": "Sofá",
+                  "hint": "Fixo ou solto? Quantos lugares?",
+                  "icon": "sofa"
+                },
+                {
+                  "id": "cervejeira",
+                  "label": "Cervejeira",
+                  "hint": "Modelo / dimensões",
+                  "icon": "beer"
+                },
+                {
+                  "id": "freezer",
+                  "label": "Freezer",
+                  "hint": "Modelo / dimensões",
+                  "icon": "snowflake"
+                },
+                {
+                  "id": "cooktop-ou-fogao",
+                  "label": "Cooktop ou fogão",
+                  "hint": "Gás ou indução",
+                  "icon": "flame"
+                },
+                {
+                  "id": "ar-condicionado",
+                  "label": "Ar-condicionado",
+                  "hint": "Modelo, se já tiver",
+                  "icon": "air-vent"
+                },
+                {
+                  "id": "outros",
+                  "label": "Outros",
+                  "hint": "Quais?",
+                  "icon": "plug"
+                }
+              ]
+            },
+            {
+              "id": "ar-tipo",
+              "label": "Que tipo de ar-condicionado preferem?",
+              "icon": "air-vent",
+              "type": "single",
+              "options": [
+                {
+                  "value": "split",
+                  "label": "Split",
+                  "art": "ar-split",
+                  "hint": "aparelho na parede"
+                },
+                {
+                  "value": "cassete",
+                  "label": "Cassete",
+                  "art": "ar-cassete",
+                  "hint": "embutido no teto"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor no espaço",
+                  "exclusive": true
+                }
+              ],
+              "showIf": {
+                "q": "equip",
+                "is": "ar-condicionado"
+              }
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lavabo_interno",
+      "name": "Lavabo interno",
+      "kicker": "Receber · Detalhe · Impacto",
+      "intro": "O banheiro das visitas: pequeno, mas um ótimo lugar para ousar nos acabamentos.",
+      "cover": "img/capas/lavabo_interno.jpg",
+      "images": [],
+      "groups": [
+        {
+          "id": "lavabo",
+          "title": "Lavabo interno",
+          "subtitle": "Peças e acabamentos do banheiro das visitas.",
+          "questions": [
+            {
+              "id": "cuba",
+              "label": "Cuba",
+              "icon": "droplets",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "apoio",
+                  "label": "Apoio",
+                  "art": "lav-apoio",
+                  "hint": "sobre a bancada"
+                },
+                {
+                  "value": "semiencaixe",
+                  "label": "Semiencaixe",
+                  "art": "lav-semiencaixe",
+                  "hint": "metade para fora"
+                },
+                {
+                  "value": "esculpida",
+                  "label": "Esculpida",
+                  "art": "lav-esculpida",
+                  "hint": "na própria pedra"
+                },
+                {
+                  "value": "de-piso",
+                  "label": "De piso",
+                  "art": "lav-piso",
+                  "hint": "peça escultural"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "torneira",
+              "label": "Torneira",
+              "icon": "droplets",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "de-mesa",
+                  "label": "De mesa",
+                  "image": "img/opcoes/torneira_mesa.jpg"
+                },
+                {
+                  "value": "de-parede",
+                  "label": "De parede",
+                  "image": "img/opcoes/torneira_parede.jpg"
+                }
+              ]
+            },
+            {
+              "id": "espelho",
+              "label": "Formato do espelho",
+              "icon": "mirror",
+              "type": "single",
+              "options": [
+                {
+                  "value": "redondo",
+                  "label": "Redondo",
+                  "art": "espelho-redondo"
+                },
+                {
+                  "value": "organico",
+                  "label": "Orgânico",
+                  "art": "espelho-organico",
+                  "hint": "formas livres"
+                },
+                {
+                  "value": "retangular",
+                  "label": "Retangular",
+                  "art": "espelho-retangular"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "revestimento",
+              "label": "Como preferem os revestimentos?",
+              "icon": "layers",
+              "type": "single",
+              "options": [
+                {
+                  "value": "uniformes",
+                  "label": "Uniformes",
+                  "image": "img/opcoes/revest_uniforme.jpg",
+                  "hint": "o mesmo material em todas as paredes"
+                },
+                {
+                  "value": "uma-parede-de-destaque",
+                  "label": "Uma parede de destaque",
+                  "image": "img/opcoes/revest_destaque.jpg",
+                  "hint": "geralmente atrás da bancada"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que valorizar mais o espaço",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lavabo_externo",
+      "name": "Lavabo externo",
+      "kicker": "Área externa · Praticidade · Resistência",
+      "intro": "Atende a área gourmet, a piscina ou o jardim. Materiais resistentes e fáceis de limpar.",
+      "cover": "img/capas/lavabo_externo.jpg",
+      "images": [],
+      "groups": [
+        {
+          "id": "lavabo",
+          "title": "Lavabo externo",
+          "subtitle": "Para quem está na área gourmet, na piscina ou no jardim.",
+          "questions": [
+            {
+              "id": "cuba",
+              "label": "Cuba",
+              "icon": "droplets",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "apoio",
+                  "label": "Apoio",
+                  "art": "lav-apoio",
+                  "hint": "sobre a bancada"
+                },
+                {
+                  "value": "semiencaixe",
+                  "label": "Semiencaixe",
+                  "art": "lav-semiencaixe",
+                  "hint": "metade para fora"
+                },
+                {
+                  "value": "esculpida",
+                  "label": "Esculpida",
+                  "art": "lav-esculpida",
+                  "hint": "na própria pedra"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "torneira",
+              "label": "Torneira",
+              "icon": "droplets",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "de-mesa",
+                  "label": "De mesa",
+                  "image": "img/opcoes/torneira_mesa.jpg"
+                },
+                {
+                  "value": "de-parede",
+                  "label": "De parede",
+                  "image": "img/opcoes/torneira_parede.jpg"
+                }
+              ]
+            },
+            {
+              "id": "ducha",
+              "label": "Ducha para quem sai da piscina?",
+              "icon": "shower",
+              "hint": "Pode ficar do lado de fora, perto da porta.",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "espelho",
+              "label": "Formato do espelho",
+              "icon": "mirror",
+              "type": "single",
+              "options": [
+                {
+                  "value": "redondo",
+                  "label": "Redondo",
+                  "art": "espelho-redondo"
+                },
+                {
+                  "value": "organico",
+                  "label": "Orgânico",
+                  "art": "espelho-organico",
+                  "hint": "formas livres"
+                },
+                {
+                  "value": "retangular",
+                  "label": "Retangular",
+                  "art": "espelho-retangular"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "revestimento",
+              "label": "Como preferem os revestimentos?",
+              "icon": "layers",
+              "type": "single",
+              "options": [
+                {
+                  "value": "uniformes",
+                  "label": "Uniformes",
+                  "image": "img/opcoes/revest_uniforme.jpg",
+                  "hint": "o mesmo material em todas as paredes"
+                },
+                {
+                  "value": "uma-parede-de-destaque",
+                  "label": "Uma parede de destaque",
+                  "image": "img/opcoes/revest_destaque.jpg",
+                  "hint": "geralmente atrás da bancada"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que valorizar mais o espaço",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master",
+      "name": "Suíte master",
+      "kicker": "Descanso · Conforto · Privacidade",
+      "intro": "Um espaço pensado a partir da rotina, das preferências e das prioridades do casal.",
+      "cover": "img/capas/master.jpg",
+      "deckPrompt": "Atmosfera, cabeceiras e materiais para a suíte do casal.",
+      "images": [
+        {
+          "id": "master-01",
+          "src": "img/master/01.jpg",
+          "tags": [
+            "amadeirado",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-02",
+          "src": "img/master/02.jpg",
+          "tags": [
+            "claro",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-03",
+          "src": "img/master/03.jpg",
+          "tags": [
+            "escuro",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-04",
+          "src": "img/master/04.jpg",
+          "tags": [
+            "amadeirado",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-05",
+          "src": "img/master/05.jpg",
+          "tags": [
+            "natural",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-06",
+          "src": "img/master/06.jpg",
+          "tags": [
+            "cor",
+            "classico"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-07",
+          "src": "img/master/07.jpg",
+          "tags": [
+            "escuro",
+            "amadeirado",
+            "iluminacao"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-08",
+          "src": "img/master/08.jpg",
+          "tags": [
+            "amadeirado",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-09",
+          "src": "img/master/09.jpg",
+          "tags": [
+            "cor",
+            "escuro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-10",
+          "src": "img/master/10.jpg",
+          "tags": [
+            "claro",
+            "classico"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-11",
+          "src": "img/master/11.jpg",
+          "tags": [
+            "cor",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-12",
+          "src": "img/master/12.jpg",
+          "tags": [
+            "natural",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-13",
+          "src": "img/master/13.jpg",
+          "tags": [
+            "cor",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-14",
+          "src": "img/master/14.jpg",
+          "tags": [
+            "cor",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-15",
+          "src": "img/master/15.jpg",
+          "tags": [
+            "escuro",
+            "amadeirado",
+            "classico"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-16",
+          "src": "img/master/16.jpg",
+          "tags": [
+            "amadeirado",
+            "pedra"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-17",
+          "src": "img/master/17.jpg",
+          "tags": [
+            "minimalista",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-18",
+          "src": "img/master/18.jpg",
+          "tags": [
+            "escuro",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-19",
+          "src": "img/master/19.jpg",
+          "tags": [
+            "amadeirado",
+            "iluminacao",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-20",
+          "src": "img/master/20.jpg",
+          "tags": [
+            "natural",
+            "amadeirado",
+            "iluminacao"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "master-21",
+          "src": "img/master/21.jpg",
+          "tags": [
+            "pedra",
+            "escuro",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        }
+      ],
+      "groups": [
+        {
+          "id": "rotina",
+          "title": "O quarto do casal",
+          "subtitle": "Cama, cabeceira e o jeito de descansar.",
+          "questions": [
+            {
+              "id": "cama",
+              "label": "Tamanho da cama",
+              "icon": "bed",
+              "type": "single",
+              "options": [
+                {
+                  "value": "casal",
+                  "label": "Casal",
+                  "art": "cama-casal",
+                  "hint": "138 × 188 cm"
+                },
+                {
+                  "value": "queen",
+                  "label": "Queen",
+                  "art": "cama-queen",
+                  "hint": "158 × 198 cm"
+                },
+                {
+                  "value": "king",
+                  "label": "King",
+                  "art": "cama-king",
+                  "hint": "193 × 203 cm"
+                }
+              ]
+            },
+            {
+              "id": "cama-altura",
+              "label": "Que altura de cama estofada preferem?",
+              "icon": "bed",
+              "type": "single",
+              "options": [
+                {
+                  "value": "mais-baixa",
+                  "label": "Mais baixa",
+                  "art": "cama-baixa",
+                  "hint": "em torno de 35 cm"
+                },
+                {
+                  "value": "altura-padrao",
+                  "label": "Altura padrão",
+                  "art": "cama-padrao",
+                  "hint": "em torno de 50 cm"
+                },
+                {
+                  "value": "mais-alta",
+                  "label": "Mais alta",
+                  "art": "cama-alta",
+                  "hint": "em torno de 60 cm"
+                },
+                {
+                  "value": "definir-com-o-arquiteto",
+                  "label": "Definir com o arquiteto",
+                  "art": "arquiteto",
+                  "hint": "deixamos em aberto e conversamos depois",
+                  "exclusive": true
+                }
+              ],
+              "hint": "Altura do colchão até o chão. Tem gente que não se adapta a camas muito baixas."
+            },
+            {
+              "id": "cabeceira",
+              "label": "Que tipo de cabeceira chama mais atenção?",
+              "icon": "frame",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "painel-de-pedra",
+                  "label": "Painel de pedra",
+                  "image": "img/opcoes/cabeceira_pedra.jpg"
+                },
+                {
+                  "value": "madeira",
+                  "label": "Madeira",
+                  "image": "img/opcoes/cabeceira_madeira.jpg"
+                },
+                {
+                  "value": "estofada",
+                  "label": "Estofada",
+                  "image": "img/opcoes/cabeceira_estofada.jpg"
+                },
+                {
+                  "value": "com-luz-embutida",
+                  "label": "Com luz embutida",
+                  "image": "img/opcoes/cabeceira_luz.jpg"
+                },
+                {
+                  "value": "simples-e-baixa",
+                  "label": "Simples e baixa",
+                  "image": "img/opcoes/cabeceira_simples.jpg"
+                }
+              ]
+            },
+            {
+              "id": "cortina",
+              "label": "Para dormir, preferem:",
+              "icon": "moon",
+              "type": "single",
+              "options": [
+                {
+                  "value": "escuro-total",
+                  "label": "Escuro total",
+                  "icon": "moon",
+                  "hint": "blackout"
+                },
+                {
+                  "value": "luz-suave",
+                  "label": "Luz suave",
+                  "icon": "sun",
+                  "hint": "cortina leve"
+                },
+                {
+                  "value": "os-dois",
+                  "label": "Os dois",
+                  "icon": "layers",
+                  "hint": "blackout + voil"
+                }
+              ]
+            },
+            {
+              "id": "leitura",
+              "label": "Luz de leitura na cabeceira?",
+              "icon": "lamp",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "estudar",
+              "label": "Estudam ou trabalham no quarto?",
+              "icon": "laptop",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "movel",
+              "label": "Algum móvel ou detalhe que precisa entrar?",
+              "icon": "armchair",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "equip",
+          "title": "Mobiliário e equipamentos",
+          "subtitle": "Dimensione a partir do uso real e do que vai permanecer.",
+          "questions": [
+            {
+              "id": "equip",
+              "label": "O que vai ter no quarto?",
+              "icon": "plug",
+              "type": "checklist",
+              "items": [
+                {
+                  "id": "tv",
+                  "label": "TV",
+                  "hint": "Tamanho em polegadas",
+                  "icon": "tv",
+                  "choices": "[circular]"
+                },
+                {
+                  "id": "penteadeira-maquiagem",
+                  "label": "Penteadeira / maquiagem",
+                  "hint": "Dimensões / iluminação",
+                  "icon": "sparkles"
+                },
+                {
+                  "id": "poltrona-ou-chaise",
+                  "label": "Poltrona ou chaise",
+                  "hint": "Cantinho de leitura?",
+                  "icon": "armchair"
+                },
+                {
+                  "id": "bancada-de-trabalho",
+                  "label": "Bancada de trabalho",
+                  "hint": "Para computador ou notebook. Quantas pessoas usam?",
+                  "icon": "laptop"
+                },
+                {
+                  "id": "eletronicos",
+                  "label": "Eletrônicos",
+                  "hint": "Quais?",
+                  "icon": "plug"
+                },
+                {
+                  "id": "ar-condicionado",
+                  "label": "Ar-condicionado",
+                  "hint": "Modelo, se já tiver",
+                  "icon": "air-vent"
+                }
+              ]
+            },
+            {
+              "id": "ar-tipo",
+              "label": "Que tipo de ar-condicionado preferem?",
+              "icon": "air-vent",
+              "type": "single",
+              "options": [
+                {
+                  "value": "split",
+                  "label": "Split",
+                  "art": "ar-split",
+                  "hint": "aparelho na parede"
+                },
+                {
+                  "value": "cassete",
+                  "label": "Cassete",
+                  "art": "ar-cassete",
+                  "hint": "embutido no teto"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor no espaço",
+                  "exclusive": true
+                }
+              ],
+              "showIf": {
+                "q": "equip",
+                "is": "ar-condicionado"
+              }
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closet",
+      "name": "Closet master",
+      "kicker": "Organização · Rotina · Cuidado",
+      "intro": "Objetos, hábitos e volume de peças definem um closet que funciona no dia a dia.",
+      "cover": "img/capas/closet.jpg",
+      "deckPrompt": "Referências de closet: portas, iluminação e organização.",
+      "images": [
+        {
+          "id": "closet-01",
+          "src": "img/closet/01.jpg",
+          "tags": [
+            "amadeirado",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet-02",
+          "src": "img/closet/02.jpg",
+          "tags": [
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet-03",
+          "src": "img/closet/03.jpg",
+          "tags": [
+            "cor",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet-04",
+          "src": "img/closet/04.jpg",
+          "tags": [
+            "amadeirado",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet-05",
+          "src": "img/closet/05.jpg",
+          "tags": [
+            "amadeirado",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet-06",
+          "src": "img/closet/06.jpg",
+          "tags": [
+            "amadeirado",
+            "pedra"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet-07",
+          "src": "img/closet/07.jpg",
+          "tags": [
+            "amadeirado",
+            "natural",
+            "iluminacao"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet-08",
+          "src": "img/closet/08.jpg",
+          "tags": [
+            "escuro",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet-09",
+          "src": "img/closet/09.jpg",
+          "tags": [
+            "claro",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet-10",
+          "src": "img/closet/10.jpg",
+          "tags": [
+            "minimalista",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet-11",
+          "src": "img/closet/11.jpg",
+          "tags": [
+            "pedra",
+            "claro",
+            "dourado"
+          ],
+          "theme": "Estilo e composição"
+        }
+      ],
+      "groups": [
+        {
+          "id": "organizacao",
+          "title": "Organização do closet",
+          "subtitle": "Quantidade de peças e hábitos definem a divisão interna.",
+          "questions": [
+            {
+              "id": "tipo",
+              "label": "Como imaginam o closet?",
+              "icon": "shirt",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "aberto",
+                  "label": "Aberto",
+                  "image": "img/opcoes/closet_aberto.jpg",
+                  "hint": "tudo à vista"
+                },
+                {
+                  "value": "portas-de-vidro",
+                  "label": "Portas de vidro",
+                  "image": "img/opcoes/closet_vidro.jpg",
+                  "hint": "protege e mostra"
+                },
+                {
+                  "value": "portas-fechadas",
+                  "label": "Portas fechadas",
+                  "image": "img/opcoes/closet_fechado.jpg",
+                  "hint": "tudo guardado"
+                }
+              ]
+            },
+            {
+              "id": "ilha",
+              "label": "Uma ilha com gavetas no meio?",
+              "icon": "boxes",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim",
+                  "icon": "check"
+                },
+                {
+                  "value": "sim-se-o-espaco-permitir",
+                  "label": "Sim, se o espaço permitir",
+                  "icon": "ruler"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não",
+                  "icon": "x"
+                }
+              ],
+              "figure": {
+                "image": "img/opcoes/closet_ilha.jpg",
+                "caption": "Exemplo de ilha com gavetas"
+              }
+            },
+            {
+              "id": "espelho",
+              "label": "Espelho de corpo inteiro?",
+              "icon": "mirror",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "roupas",
+              "label": "Roupas mais em cabides ou em gavetas?",
+              "icon": "shirt",
+              "type": "single",
+              "options": [
+                {
+                  "value": "mais-cabides",
+                  "label": "Mais cabides",
+                  "icon": "shirt"
+                },
+                {
+                  "value": "mais-gavetas",
+                  "label": "Mais gavetas",
+                  "icon": "archive"
+                },
+                {
+                  "value": "meio-a-meio",
+                  "label": "Meio a meio",
+                  "icon": "columns"
+                }
+              ]
+            },
+            {
+              "id": "pecas-longas",
+              "label": "Muitas peças longas?",
+              "icon": "shirt",
+              "hint": "Vestidos e casacos pedem cabideiro alto.",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "calcados",
+              "type": "fields",
+              "named": true,
+              "label": "Quantos pares de calçados cada um tem, mais ou menos?",
+              "icon": "footprints",
+              "hint": "Escreva o nome e a quantidade de cada pessoa.",
+              "fields": [
+                {
+                  "id": "p1",
+                  "label": "Pessoa 1",
+                  "numeric": true
+                },
+                {
+                  "id": "p2",
+                  "label": "Pessoa 2",
+                  "numeric": true
+                }
+              ]
+            },
+            {
+              "id": "bolsas",
+              "label": "Quantas bolsas, no total?",
+              "icon": "bag",
+              "type": "number",
+              "min": 0,
+              "max": 120,
+              "step": 5
+            },
+            {
+              "id": "joias",
+              "label": "Guardam joias ou objetos de valor?",
+              "icon": "gem",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "cofre",
+              "label": "Querem um cofre?",
+              "icon": "vault",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "banho_master",
+      "name": "Banheiro master",
+      "kicker": "Bem-estar · Rotina · Detalhe",
+      "intro": "Um espaço pensado a partir da rotina, das preferências e das prioridades do casal.",
+      "cover": "img/capas/banho_master.jpg",
+      "deckPrompt": "Atmosfera e materiais para o banheiro do casal.",
+      "images": [
+        {
+          "id": "banho_master-01",
+          "src": "img/banho_master/01.jpg",
+          "tags": [
+            "classico",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-02",
+          "src": "img/banho_master/02.jpg",
+          "tags": [
+            "escuro",
+            "pedra"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-03",
+          "src": "img/banho_master/03.jpg",
+          "tags": [
+            "cor",
+            "classico"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-04",
+          "src": "img/banho_master/04.jpg",
+          "tags": [
+            "natural",
+            "amadeirado",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-05",
+          "src": "img/banho_master/05.jpg",
+          "tags": [
+            "pedra",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-06",
+          "src": "img/banho_master/06.jpg",
+          "tags": [
+            "escuro",
+            "amadeirado",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-07",
+          "src": "img/banho_master/07.jpg",
+          "tags": [
+            "minimalista",
+            "pedra"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-08",
+          "src": "img/banho_master/08.jpg",
+          "tags": [
+            "pedra",
+            "claro",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-09",
+          "src": "img/banho_master/09.jpg",
+          "tags": [
+            "pedra",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-10",
+          "src": "img/banho_master/10.jpg",
+          "tags": [
+            "cor",
+            "pedra",
+            "classico"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-11",
+          "src": "img/banho_master/11.jpg",
+          "tags": [
+            "pedra",
+            "dourado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-12",
+          "src": "img/banho_master/12.jpg",
+          "tags": [
+            "escuro",
+            "pedra"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-13",
+          "src": "img/banho_master/13.jpg",
+          "tags": [
+            "escuro",
+            "iluminacao",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banho_master-14",
+          "src": "img/banho_master/14.jpg",
+          "tags": [
+            "pedra",
+            "amadeirado",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        }
+      ],
+      "groups": [
+        {
+          "id": "loucas",
+          "title": "Louças, metais e revestimentos",
+          "subtitle": "Escolhas de uso primeiro. Acabamento e especificação técnica depois.",
+          "questions": [
+            {
+              "id": "cuba",
+              "label": "Cuba",
+              "icon": "droplets",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "apoio",
+                  "label": "Apoio",
+                  "art": "lav-apoio"
+                },
+                {
+                  "value": "embutir",
+                  "label": "Embutir",
+                  "art": "lav-embutir"
+                },
+                {
+                  "value": "esculpida",
+                  "label": "Esculpida",
+                  "art": "lav-esculpida"
+                },
+                {
+                  "value": "de-piso",
+                  "label": "De piso",
+                  "art": "lav-piso",
+                  "hint": "peça escultural"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "duas-cubas",
+              "label": "Duas cubas, uma para cada?",
+              "icon": "users",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "pedra",
+              "label": "Pedra da bancada",
+              "icon": "layers",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "super-nano",
+                  "label": "Super Nano",
+                  "image": "img/opcoes/pedra_super_nano.jpg",
+                  "hint": "branco liso"
+                },
+                {
+                  "value": "sao-gabriel-escovado",
+                  "label": "São Gabriel escovado",
+                  "image": "img/opcoes/pedra_sao_gabriel.jpg",
+                  "hint": "granito preto, textura fosca"
+                },
+                {
+                  "value": "perla-santana",
+                  "label": "Perla Santana",
+                  "image": "img/opcoes/pedra_perla_santana.jpg",
+                  "hint": "quartzito bege acinzentado com veios"
+                },
+                {
+                  "value": "travertino",
+                  "label": "Travertino",
+                  "image": "img/opcoes/travertino.jpg",
+                  "hint": "bege, com poros e veios aparentes"
+                },
+                {
+                  "value": "detalhes-em-onix-iluminado",
+                  "label": "Detalhes em ônix iluminado",
+                  "image": "img/opcoes/onix.jpg",
+                  "hint": "pedra translúcida com luz por trás"
+                },
+                {
+                  "value": "outra",
+                  "label": "Outra",
+                  "icon": "help"
+                }
+              ]
+            },
+            {
+              "id": "torneira",
+              "label": "Torneira",
+              "icon": "droplets",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "de-mesa",
+                  "label": "De mesa",
+                  "image": "img/opcoes/torneira_mesa.jpg"
+                },
+                {
+                  "value": "de-parede",
+                  "label": "De parede",
+                  "image": "img/opcoes/torneira_parede.jpg"
+                }
+              ]
+            },
+            {
+              "id": "armario",
+              "label": "Acima da bancada",
+              "icon": "archive",
+              "type": "single",
+              "options": [
+                {
+                  "value": "armario-com-espelho",
+                  "label": "Armário com espelho",
+                  "art": "armario-espelho",
+                  "hint": "espelho na frente das portas"
+                },
+                {
+                  "value": "so-espelho",
+                  "label": "Só espelho",
+                  "art": "espelho",
+                  "hint": "sem armário em cima"
+                }
+              ]
+            },
+            {
+              "id": "chuveiro",
+              "label": "Chuveiro",
+              "icon": "shower",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "de-parede",
+                  "label": "De parede",
+                  "image": "img/opcoes/chuveiro_parede.jpg"
+                },
+                {
+                  "value": "de-teto",
+                  "label": "De teto",
+                  "image": "img/opcoes/chuveiro_teto.jpg"
+                },
+                {
+                  "value": "duplo",
+                  "label": "Duplo",
+                  "icon": "shower",
+                  "hint": "um para cada"
+                }
+              ]
+            },
+            {
+              "id": "box",
+              "label": "Box do chuveiro",
+              "icon": "shower",
+              "type": "single",
+              "options": [
+                {
+                  "value": "ate-o-teto",
+                  "label": "Até o teto",
+                  "art": "box-teto",
+                  "hint": "vidro do piso ao teto"
+                },
+                {
+                  "value": "padrao",
+                  "label": "Padrão",
+                  "art": "box-padrao",
+                  "hint": "altura comum, aberto em cima"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "conforme o uso do banheiro",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "revestimento",
+              "label": "Como preferem os revestimentos?",
+              "icon": "layers",
+              "type": "single",
+              "options": [
+                {
+                  "value": "uniformes",
+                  "label": "Uniformes",
+                  "image": "img/opcoes/revest_uniforme.jpg",
+                  "hint": "o mesmo material em todas as paredes"
+                },
+                {
+                  "value": "uma-parede-de-destaque",
+                  "label": "Uma parede de destaque",
+                  "image": "img/opcoes/revest_destaque.jpg",
+                  "hint": "cor ou textura diferente em uma parede"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que valorizar mais o espaço",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "revestimento-onde",
+              "label": "Onde seria o destaque?",
+              "icon": "layers",
+              "type": "single",
+              "options": [
+                {
+                  "value": "parede-do-box",
+                  "label": "Parede do box",
+                  "icon": "shower"
+                },
+                {
+                  "value": "parede-da-bancada",
+                  "label": "Parede da bancada",
+                  "icon": "droplets"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "icon": "architect",
+                  "exclusive": true
+                }
+              ],
+              "showIf": {
+                "q": "revestimento",
+                "is": "uma-parede-de-destaque"
+              }
+            },
+            {
+              "id": "nichos",
+              "label": "Quantos nichos no box?",
+              "icon": "layers",
+              "type": "number",
+              "min": 0,
+              "max": 4,
+              "hint": "Para shampoo e produtos de higiene.",
+              "off": true
+            },
+            {
+              "id": "banheira",
+              "label": "Banheira?",
+              "icon": "bath",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "som",
+              "label": "Som ambiente?",
+              "icon": "speaker",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar modelos ou observações",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Modelos já escolhidos, medidas ou outros detalhes."
+            }
+          ]
+        },
+        {
+          "id": "habitos",
+          "title": "Hábitos e preferências",
+          "subtitle": "A rotina define ergonomia, luz e onde guardar cada coisa.",
+          "questions": [
+            {
+              "id": "iluminacao",
+              "label": "Que luz preferem no banheiro?",
+              "icon": "bulb",
+              "type": "single",
+              "options": [
+                {
+                  "value": "clara",
+                  "label": "Clara",
+                  "swatch": "radial-gradient(circle at 50% 0%, #ffffff 0%, #eef4fb 55%, #cfdcec 100%)",
+                  "hint": "luz branca, funcional"
+                },
+                {
+                  "value": "aconchegante",
+                  "label": "Aconchegante",
+                  "swatch": "radial-gradient(circle at 50% 0%, #ffe2ad 0%, #e6a45c 45%, #6b4426 100%)",
+                  "hint": "luz amarela, indireta"
+                },
+                {
+                  "value": "com-cenas",
+                  "label": "Com cenas",
+                  "swatch": "linear-gradient(90deg, #eef4fb 0 33%, #f5c886 33% 66%, #5b3d2a 66%)",
+                  "hint": "muda conforme o momento"
+                }
+              ]
+            },
+            {
+              "id": "perfumes",
+              "label": "Onde ficam os perfumes?",
+              "icon": "gem",
+              "type": "single",
+              "options": [
+                {
+                  "value": "banheiro",
+                  "label": "Banheiro",
+                  "icon": "droplets"
+                },
+                {
+                  "value": "closet",
+                  "label": "Closet",
+                  "icon": "shirt"
+                },
+                {
+                  "value": "em-ambos",
+                  "label": "Em ambos",
+                  "icon": "layers",
+                  "hint": "banheiro e closet"
+                }
+              ]
+            },
+            {
+              "id": "cremes",
+              "label": "Muitos cremes e itens de cuidado?",
+              "icon": "sparkles",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "maquiagem",
+              "label": "Alguém se maquia no banheiro?",
+              "icon": "sparkle",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "roupa-suja",
+              "label": "Costumam deixar roupa suja no banheiro?",
+              "icon": "shirt",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "metalicos",
+              "label": "Gostam de metais aparentes?",
+              "icon": "sparkle",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "servico",
+      "name": "Área de serviço",
+      "kicker": "Funcionalidade · Fluxo · Armazenamento",
+      "intro": "Uma boa área de serviço reduz ruído visual, organiza tarefas recorrentes e facilita a rotina da casa.",
+      "cover": "img/capas/servico.jpg",
+      "images": [],
+      "groups": [
+        {
+          "id": "rotina",
+          "title": "Rotina e equipamentos",
+          "subtitle": "Lavagem, secagem, apoio e armazenamento.",
+          "questions": [
+            {
+              "id": "quem",
+              "label": "Quem mais usa a área de serviço?",
+              "icon": "user",
+              "type": "single",
+              "options": [
+                {
+                  "value": "os-moradores",
+                  "label": "Os moradores",
+                  "icon": "users"
+                },
+                {
+                  "value": "funcionario-a",
+                  "label": "Funcionário(a)",
+                  "icon": "briefcase"
+                },
+                {
+                  "value": "ambos",
+                  "label": "Ambos",
+                  "icon": "house"
+                }
+              ]
+            },
+            {
+              "id": "frequencia",
+              "label": "Com que frequência?",
+              "icon": "calendar",
+              "type": "single",
+              "options": [
+                {
+                  "value": "todo-dia",
+                  "label": "Todo dia"
+                },
+                {
+                  "value": "algumas-vezes-por-semana",
+                  "label": "Algumas vezes por semana"
+                },
+                {
+                  "value": "uma-vez-por-semana",
+                  "label": "Uma vez por semana"
+                }
+              ]
+            },
+            {
+              "id": "equip",
+              "label": "O que precisa caber aqui?",
+              "icon": "washer",
+              "type": "checklist",
+              "items": [
+                {
+                  "id": "maquina-de-lavar",
+                  "label": "Máquina de lavar",
+                  "hint": "Modelo / capacidade",
+                  "icon": "washer"
+                },
+                {
+                  "id": "lava-e-seca",
+                  "label": "Lava e seca",
+                  "hint": "Modelo / capacidade",
+                  "icon": "washer"
+                },
+                {
+                  "id": "secadora",
+                  "label": "Secadora",
+                  "hint": "Modelo / capacidade",
+                  "icon": "wind"
+                },
+                {
+                  "id": "tanque",
+                  "label": "Tanque",
+                  "hint": "Tanque ou cuba funda",
+                  "icon": "droplets"
+                },
+                {
+                  "id": "varal",
+                  "label": "Varal",
+                  "hint": "Teto, parede ou articulado",
+                  "icon": "shirt"
+                },
+                {
+                  "id": "armario-para-vassoura-e-aspirador",
+                  "label": "Armário para vassoura e aspirador",
+                  "hint": "Altura do aspirador",
+                  "icon": "archive"
+                }
+              ],
+              "noSpecs": true,
+              "tipItems": [
+                "maquina-de-lavar",
+                "lava-e-seca",
+                "secadora"
+              ],
+              "tip": "Se as máquinas já estiverem definidas, mandem o modelo (ou uma foto da etiqueta) no nosso grupo do WhatsApp. Assim já consideramos as medidas certas."
+            },
+            {
+              "id": "tabua",
+              "label": "Lugar específico para a tábua de passar?",
+              "icon": "shirt",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quarto",
+      "name": "Quarto",
+      "kicker": "Rotina pessoal · Descanso · Estudo",
+      "intro": "Um espaço pensado a partir da rotina, das preferências e das prioridades de quem vai dormir aqui.",
+      "cover": "img/capas/quarto.jpg",
+      "deckPrompt": "Referências de quartos com estudo, lazer e descanso.",
+      "repeatable": true,
+      "images": [
+        {
+          "id": "quarto-01",
+          "src": "img/quarto/01.jpg",
+          "tags": [
+            "cor",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "quarto-02",
+          "src": "img/quarto/02.jpg",
+          "tags": [
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "quarto-03",
+          "src": "img/quarto/03.jpg",
+          "tags": [
+            "cor",
+            "classico"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "quarto-04",
+          "src": "img/quarto/04.jpg",
+          "tags": [
+            "cor",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "quarto-05",
+          "src": "img/quarto/05.jpg",
+          "tags": [
+            "amadeirado",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "quarto-06",
+          "src": "img/quarto/06.jpg",
+          "tags": [
+            "claro",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "quarto-07",
+          "src": "img/quarto/07.jpg",
+          "tags": [
+            "cor",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "quarto-08",
+          "src": "img/quarto/08.jpg",
+          "tags": [
+            "cor",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "quarto-09",
+          "src": "img/quarto/09.jpg",
+          "tags": [
+            "claro",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "quarto-10",
+          "src": "img/quarto/10.jpg",
+          "tags": [
+            "escuro",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "quarto-11",
+          "src": "img/quarto/11.jpg",
+          "tags": [
+            "amadeirado",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "quarto-12",
+          "src": "img/quarto/12.jpg",
+          "tags": [
+            "minimalista",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        }
+      ],
+      "groups": [
+        {
+          "id": "perfil",
+          "title": "Rotina no quarto",
+          "subtitle": "Descanso, estudo e o que precisa ser guardado.",
+          "questions": [
+            {
+              "id": "perfil",
+              "type": "fields",
+              "label": "Sobre o morador",
+              "icon": "user",
+              "off": true,
+              "fields": [
+                {
+                  "id": "nome",
+                  "label": "Nome"
+                },
+                {
+                  "id": "idade",
+                  "label": "Idade",
+                  "numeric": true
+                },
+                {
+                  "id": "profissao",
+                  "label": "Profissão / ocupação"
+                },
+                {
+                  "id": "hobbies",
+                  "label": "Hobbies"
+                }
+              ]
+            },
+            {
+              "id": "cama",
+              "label": "Tamanho da cama",
+              "icon": "bed",
+              "type": "single",
+              "options": [
+                {
+                  "value": "solteiro",
+                  "label": "Solteiro",
+                  "art": "cama-solteiro",
+                  "hint": "88 × 188 cm"
+                },
+                {
+                  "value": "solteirao",
+                  "label": "Solteirão",
+                  "art": "cama-solteirao",
+                  "hint": "96 × 203 cm"
+                },
+                {
+                  "value": "casal",
+                  "label": "Casal",
+                  "art": "cama-casal",
+                  "hint": "138 × 188 cm"
+                },
+                {
+                  "value": "queen",
+                  "label": "Queen",
+                  "art": "cama-queen",
+                  "hint": "158 × 198 cm"
+                },
+                {
+                  "value": "king",
+                  "label": "King",
+                  "art": "cama-king",
+                  "hint": "193 × 203 cm"
+                }
+              ]
+            },
+            {
+              "id": "cortina",
+              "label": "Para dormir, preferem:",
+              "icon": "moon",
+              "type": "single",
+              "options": [
+                {
+                  "value": "escuro-total",
+                  "label": "Escuro total",
+                  "icon": "moon",
+                  "hint": "blackout"
+                },
+                {
+                  "value": "luz-suave",
+                  "label": "Luz suave",
+                  "icon": "sun",
+                  "hint": "cortina leve"
+                },
+                {
+                  "value": "os-dois",
+                  "label": "Os dois",
+                  "icon": "layers",
+                  "hint": "blackout + voil"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "leitura",
+              "label": "Luz de leitura na cabeceira?",
+              "icon": "lamp",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "amigos",
+              "label": "Recebe amigos para dormir?",
+              "icon": "users",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "estudar",
+              "label": "Estuda ou trabalha no quarto?",
+              "icon": "laptop",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "livros",
+              "label": "Tem muitos livros?",
+              "icon": "book",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "colecoes",
+              "label": "Guarda brinquedos, coleções ou objetos?",
+              "icon": "puzzle",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "roupas",
+              "label": "Roupas mais em cabides ou em gavetas?",
+              "icon": "shirt",
+              "type": "single",
+              "options": [
+                {
+                  "value": "mais-cabides",
+                  "label": "Mais cabides",
+                  "icon": "shirt"
+                },
+                {
+                  "value": "mais-gavetas",
+                  "label": "Mais gavetas",
+                  "icon": "archive"
+                },
+                {
+                  "value": "meio-a-meio",
+                  "label": "Meio a meio",
+                  "icon": "columns"
+                }
+              ]
+            },
+            {
+              "id": "pecas-longas",
+              "label": "Tem vestidos ou casacos longos?",
+              "icon": "shirt",
+              "hint": "Pedem um cabideiro mais alto.",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "calcados",
+              "label": "Que calçados predominam?",
+              "icon": "footprints",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "tenis",
+                  "label": "Tênis"
+                },
+                {
+                  "value": "saltos",
+                  "label": "Saltos"
+                },
+                {
+                  "value": "rasteiras",
+                  "label": "Rasteiras"
+                },
+                {
+                  "value": "botas",
+                  "label": "Botas"
+                },
+                {
+                  "value": "chinelos",
+                  "label": "Chinelos"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "movel",
+              "label": "Algum móvel ou detalhe que precisa entrar?",
+              "icon": "armchair",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "equip",
+          "title": "Mobiliário e equipamentos",
+          "subtitle": "Marque o que deve ser previsto no quarto.",
+          "questions": [
+            {
+              "id": "equip",
+              "label": "O que vai ter no quarto?",
+              "icon": "plug",
+              "type": "checklist",
+              "items": [
+                {
+                  "id": "tv",
+                  "label": "TV",
+                  "hint": "Tamanho / modelo",
+                  "icon": "tv"
+                },
+                {
+                  "id": "bancada-de-estudo",
+                  "label": "Bancada de estudo",
+                  "hint": "Quantas pessoas usam?",
+                  "icon": "laptop"
+                },
+                {
+                  "id": "computador",
+                  "label": "Computador",
+                  "hint": "Desktop, notebook, monitores",
+                  "icon": "monitor"
+                },
+                {
+                  "id": "videogame",
+                  "label": "Videogame",
+                  "hint": "Console / acessórios",
+                  "icon": "gamepad"
+                },
+                {
+                  "id": "estante",
+                  "label": "Estante",
+                  "hint": "Livros, objetos, coleções",
+                  "icon": "book"
+                },
+                {
+                  "id": "poltrona",
+                  "label": "Poltrona",
+                  "hint": "Uso / preferência",
+                  "icon": "armchair"
+                },
+                {
+                  "id": "penteadeira",
+                  "label": "Penteadeira",
+                  "hint": "Dimensões / iluminação",
+                  "icon": "sparkles"
+                },
+                {
+                  "id": "closet",
+                  "label": "Closet",
+                  "hint": "Aberto, fechado ou integrado",
+                  "icon": "shirt"
+                },
+                {
+                  "id": "itens-esportivos",
+                  "label": "Itens esportivos",
+                  "hint": "Equipamentos / armazenamento",
+                  "icon": "dumbbell"
+                },
+                {
+                  "id": "instrumentos-ou-eletronicos",
+                  "label": "Instrumentos ou eletrônicos",
+                  "hint": "Quais?",
+                  "icon": "music"
+                },
+                {
+                  "id": "ar-condicionado",
+                  "label": "Ar-condicionado",
+                  "hint": "Modelo, se já tiver",
+                  "icon": "air-vent"
+                }
+              ]
+            },
+            {
+              "id": "ar-tipo",
+              "label": "Que tipo de ar-condicionado preferem?",
+              "icon": "air-vent",
+              "type": "single",
+              "options": [
+                {
+                  "value": "split",
+                  "label": "Split",
+                  "art": "ar-split",
+                  "hint": "aparelho na parede"
+                },
+                {
+                  "value": "cassete",
+                  "label": "Cassete",
+                  "art": "ar-cassete",
+                  "hint": "embutido no teto"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor no espaço",
+                  "exclusive": true
+                }
+              ],
+              "showIf": {
+                "q": "equip",
+                "is": "ar-condicionado"
+              }
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closet_suite",
+      "name": "Closet suíte",
+      "kicker": "Organização · Praticidade",
+      "intro": "Um closet mais enxuto, pensado para as suítes da casa.",
+      "cover": "img/capas/closet.jpg",
+      "deckPrompt": "Referências de closet: portas, iluminação e organização.",
+      "repeatable": true,
+      "images": [
+        {
+          "id": "closet_suite-01",
+          "src": "img/closet_suite/01.jpg",
+          "tags": [
+            "cor",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet_suite-02",
+          "src": "img/closet_suite/02.jpg",
+          "tags": [
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet_suite-03",
+          "src": "img/closet_suite/03.jpg",
+          "tags": [
+            "claro",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet_suite-04",
+          "src": "img/closet_suite/04.jpg",
+          "tags": [
+            "minimalista",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "closet_suite-05",
+          "src": "img/closet_suite/05.jpg",
+          "tags": [
+            "claro",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        }
+      ],
+      "groups": [
+        {
+          "id": "organizacao",
+          "title": "Organização do closet",
+          "subtitle": "O essencial para dividir bem o espaço.",
+          "questions": [
+            {
+              "id": "tipo",
+              "label": "Como imaginam o closet?",
+              "icon": "shirt",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "aberto",
+                  "label": "Aberto",
+                  "image": "img/opcoes/closet_aberto.jpg",
+                  "hint": "tudo à vista"
+                },
+                {
+                  "value": "portas-de-vidro",
+                  "label": "Portas de vidro",
+                  "image": "img/opcoes/closet_vidro.jpg",
+                  "hint": "protege e mostra"
+                },
+                {
+                  "value": "portas-fechadas",
+                  "label": "Portas fechadas",
+                  "image": "img/opcoes/closet_fechado.jpg",
+                  "hint": "tudo guardado"
+                }
+              ]
+            },
+            {
+              "id": "espelho",
+              "label": "Espelho de corpo inteiro?",
+              "icon": "mirror",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "roupas",
+              "label": "Roupas mais em cabides ou em gavetas?",
+              "icon": "shirt",
+              "type": "single",
+              "options": [
+                {
+                  "value": "mais-cabides",
+                  "label": "Mais cabides",
+                  "icon": "shirt"
+                },
+                {
+                  "value": "mais-gavetas",
+                  "label": "Mais gavetas",
+                  "icon": "archive"
+                },
+                {
+                  "value": "meio-a-meio",
+                  "label": "Meio a meio",
+                  "icon": "columns"
+                }
+              ]
+            },
+            {
+              "id": "pecas-longas",
+              "label": "Muitas peças longas?",
+              "icon": "shirt",
+              "hint": "Vestidos e casacos pedem cabideiro alto.",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ]
+            },
+            {
+              "id": "calcados",
+              "label": "Quantos pares de calçados, mais ou menos?",
+              "icon": "footprints",
+              "type": "number",
+              "min": 0,
+              "max": 300,
+              "step": 5
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hospedes",
+      "name": "Suíte de hóspedes térreo",
+      "kicker": "Hospitalidade · Conforto · Acolhimento",
+      "intro": "Um ambiente neutro, confortável e versátil para receber hóspedes com privacidade. Fica no térreo.",
+      "cover": "img/capas/hospedes.jpg",
+      "deckPrompt": "Quartos neutros, pensados para receber bem.",
+      "images": [
+        {
+          "id": "hospedes-01",
+          "src": "img/hospedes/01.jpg",
+          "tags": [
+            "claro",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-02",
+          "src": "img/hospedes/02.jpg",
+          "tags": [
+            "cor",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-03",
+          "src": "img/hospedes/03.jpg",
+          "tags": [
+            "cor",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-04",
+          "src": "img/hospedes/04.jpg",
+          "tags": [
+            "cor",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-05",
+          "src": "img/hospedes/05.jpg",
+          "tags": [
+            "natural",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-06",
+          "src": "img/hospedes/06.jpg",
+          "tags": [
+            "amadeirado",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-07",
+          "src": "img/hospedes/07.jpg",
+          "tags": [
+            "cor",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-08",
+          "src": "img/hospedes/08.jpg",
+          "tags": [
+            "natural",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-09",
+          "src": "img/hospedes/09.jpg",
+          "tags": [
+            "cor",
+            "classico"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-10",
+          "src": "img/hospedes/10.jpg",
+          "tags": [
+            "natural",
+            "amadeirado",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        }
+      ],
+      "groups": [
+        {
+          "id": "uso",
+          "title": "Quem se hospeda e por quanto tempo",
+          "subtitle": "Define flexibilidade, armazenamento e o nível de conforto ideal.",
+          "questions": [
+            {
+              "id": "frequencia",
+              "label": "Com que frequência recebem hóspedes?",
+              "icon": "calendar",
+              "type": "single",
+              "options": [
+                {
+                  "value": "raramente",
+                  "label": "Raramente"
+                },
+                {
+                  "value": "todo-mes",
+                  "label": "Todo mês"
+                },
+                {
+                  "value": "com-frequencia",
+                  "label": "Com frequência"
+                }
+              ]
+            },
+            {
+              "id": "quem",
+              "label": "Quem costuma se hospedar?",
+              "icon": "users",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "pais-ou-sogros",
+                  "label": "Pais ou sogros",
+                  "icon": "heart"
+                },
+                {
+                  "value": "outros-familiares",
+                  "label": "Outros familiares",
+                  "icon": "users"
+                },
+                {
+                  "value": "amigos",
+                  "label": "Amigos",
+                  "icon": "party"
+                },
+                {
+                  "value": "familia-com-crianca",
+                  "label": "Família com criança",
+                  "icon": "baby"
+                }
+              ]
+            },
+            {
+              "id": "duracao",
+              "label": "Quanto tempo costumam ficar?",
+              "icon": "clock",
+              "type": "single",
+              "options": [
+                {
+                  "value": "uma-noite-ou-fim-de-semana",
+                  "label": "Uma noite ou fim de semana",
+                  "icon": "moon"
+                },
+                {
+                  "value": "alguns-dias",
+                  "label": "Alguns dias",
+                  "icon": "calendar",
+                  "hint": "até uma semana"
+                },
+                {
+                  "value": "semanas-ou-temporadas",
+                  "label": "Semanas ou temporadas",
+                  "icon": "luggage"
+                }
+              ]
+            },
+            {
+              "id": "cama",
+              "label": "Configuração de cama",
+              "icon": "bed",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "casal",
+                  "label": "Casal",
+                  "art": "cama-casal"
+                },
+                {
+                  "value": "queen",
+                  "label": "Queen",
+                  "art": "cama-queen"
+                },
+                {
+                  "value": "2-de-solteiro",
+                  "label": "2 de solteiro",
+                  "art": "cama-2solteiro",
+                  "hint": "juntam e separam"
+                }
+              ]
+            },
+            {
+              "id": "guardar",
+              "label": "Do que o hóspede precisa para guardar as coisas?",
+              "icon": "archive",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "so-o-basico",
+                  "label": "Só o básico",
+                  "icon": "luggage",
+                  "hint": "mala e um cabideiro",
+                  "exclusive": true
+                },
+                {
+                  "value": "armario-para-roupas",
+                  "label": "Armário para roupas",
+                  "icon": "archive"
+                },
+                {
+                  "value": "closet",
+                  "label": "Closet",
+                  "icon": "shirt"
+                },
+                {
+                  "value": "armario-no-banheiro",
+                  "label": "Armário no banheiro",
+                  "icon": "bath"
+                }
+              ],
+              "hint": "Quem está de passagem precisa de pouco. Quem fica mais, como pais que passam o fim de semana, costuma precisar de armário."
+            },
+            {
+              "id": "outro-uso",
+              "label": "O quarto também terá outro uso?",
+              "icon": "house",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "escritorio",
+                  "label": "Escritório",
+                  "icon": "laptop"
+                },
+                {
+                  "value": "academia",
+                  "label": "Academia",
+                  "icon": "dumbbell"
+                },
+                {
+                  "value": "brinquedoteca",
+                  "label": "Brinquedoteca",
+                  "icon": "puzzle"
+                },
+                {
+                  "value": "closet-extra",
+                  "label": "Closet extra",
+                  "icon": "shirt"
+                },
+                {
+                  "value": "so-hospedes",
+                  "label": "Só hóspedes",
+                  "icon": "bed"
+                }
+              ]
+            },
+            {
+              "id": "conforto",
+              "label": "Algum item de conforto que não pode faltar?",
+              "icon": "heart",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "equip",
+          "title": "Mobiliário e equipamentos",
+          "subtitle": "Praticidade e conforto sem sobrecarregar o ambiente.",
+          "questions": [
+            {
+              "id": "equip",
+              "label": "O que vai ter na suíte?",
+              "icon": "plug",
+              "type": "checklist",
+              "items": [
+                {
+                  "id": "tv",
+                  "label": "TV",
+                  "hint": "Tamanho / modelo",
+                  "icon": "tv"
+                },
+                {
+                  "id": "maleiro",
+                  "label": "Maleiro",
+                  "hint": "Banco, nicho ou suporte",
+                  "icon": "luggage"
+                },
+                {
+                  "id": "mesas-laterais",
+                  "label": "Mesas laterais",
+                  "hint": "1 ou 2",
+                  "icon": "lamp"
+                },
+                {
+                  "id": "poltrona-ou-banco",
+                  "label": "Poltrona ou banco",
+                  "hint": "Uso / preferência",
+                  "icon": "armchair"
+                },
+                {
+                  "id": "espelho-de-corpo-inteiro",
+                  "label": "Espelho de corpo inteiro",
+                  "hint": "Parede, porta ou solto",
+                  "icon": "mirror"
+                },
+                {
+                  "id": "blackout",
+                  "label": "Blackout",
+                  "hint": "Cortina ou persiana",
+                  "icon": "moon"
+                },
+                {
+                  "id": "apoio-para-notebook",
+                  "label": "Apoio para notebook",
+                  "hint": "Mesa ou bancada compacta",
+                  "icon": "laptop"
+                },
+                {
+                  "id": "tomadas-e-usb-na-cabeceira",
+                  "label": "Tomadas e USB na cabeceira",
+                  "hint": "Quantidade / posição",
+                  "icon": "plug"
+                },
+                {
+                  "id": "ar-condicionado",
+                  "label": "Ar-condicionado",
+                  "hint": "Modelo, se já tiver",
+                  "icon": "air-vent"
+                }
+              ]
+            },
+            {
+              "id": "ar-tipo",
+              "label": "Que tipo de ar-condicionado preferem?",
+              "icon": "air-vent",
+              "type": "single",
+              "options": [
+                {
+                  "value": "split",
+                  "label": "Split",
+                  "art": "ar-split",
+                  "hint": "aparelho na parede"
+                },
+                {
+                  "value": "cassete",
+                  "label": "Cassete",
+                  "art": "ar-cassete",
+                  "hint": "embutido no teto"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor no espaço",
+                  "exclusive": true
+                }
+              ],
+              "showIf": {
+                "q": "equip",
+                "is": "ar-condicionado"
+              }
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hospedes_superior",
+      "name": "Suíte de hóspedes superior",
+      "kicker": "Hospitalidade · Conforto · Acolhimento",
+      "intro": "Um ambiente neutro, confortável e versátil para receber hóspedes com privacidade. Fica no pavimento superior.",
+      "cover": "img/capas/hospedes.jpg",
+      "deckPrompt": "Quartos neutros, pensados para receber bem.",
+      "images": [
+        {
+          "id": "hospedes-01",
+          "src": "img/hospedes/01.jpg",
+          "tags": [
+            "claro",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-02",
+          "src": "img/hospedes/02.jpg",
+          "tags": [
+            "cor",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-03",
+          "src": "img/hospedes/03.jpg",
+          "tags": [
+            "cor",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-04",
+          "src": "img/hospedes/04.jpg",
+          "tags": [
+            "cor",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-05",
+          "src": "img/hospedes/05.jpg",
+          "tags": [
+            "natural",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-06",
+          "src": "img/hospedes/06.jpg",
+          "tags": [
+            "amadeirado",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-07",
+          "src": "img/hospedes/07.jpg",
+          "tags": [
+            "cor",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-08",
+          "src": "img/hospedes/08.jpg",
+          "tags": [
+            "natural",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-09",
+          "src": "img/hospedes/09.jpg",
+          "tags": [
+            "cor",
+            "classico"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "hospedes-10",
+          "src": "img/hospedes/10.jpg",
+          "tags": [
+            "natural",
+            "amadeirado",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        }
+      ],
+      "groups": [
+        {
+          "id": "uso",
+          "title": "Quem se hospeda e por quanto tempo",
+          "subtitle": "Define flexibilidade, armazenamento e o nível de conforto ideal.",
+          "questions": [
+            {
+              "id": "frequencia",
+              "label": "Com que frequência recebem hóspedes?",
+              "icon": "calendar",
+              "type": "single",
+              "options": [
+                {
+                  "value": "raramente",
+                  "label": "Raramente"
+                },
+                {
+                  "value": "todo-mes",
+                  "label": "Todo mês"
+                },
+                {
+                  "value": "com-frequencia",
+                  "label": "Com frequência"
+                }
+              ]
+            },
+            {
+              "id": "quem",
+              "label": "Quem costuma se hospedar?",
+              "icon": "users",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "pais-ou-sogros",
+                  "label": "Pais ou sogros",
+                  "icon": "heart"
+                },
+                {
+                  "value": "outros-familiares",
+                  "label": "Outros familiares",
+                  "icon": "users"
+                },
+                {
+                  "value": "amigos",
+                  "label": "Amigos",
+                  "icon": "party"
+                },
+                {
+                  "value": "familia-com-crianca",
+                  "label": "Família com criança",
+                  "icon": "baby"
+                }
+              ]
+            },
+            {
+              "id": "duracao",
+              "label": "Quanto tempo costumam ficar?",
+              "icon": "clock",
+              "type": "single",
+              "options": [
+                {
+                  "value": "uma-noite-ou-fim-de-semana",
+                  "label": "Uma noite ou fim de semana",
+                  "icon": "moon"
+                },
+                {
+                  "value": "alguns-dias",
+                  "label": "Alguns dias",
+                  "icon": "calendar",
+                  "hint": "até uma semana"
+                },
+                {
+                  "value": "semanas-ou-temporadas",
+                  "label": "Semanas ou temporadas",
+                  "icon": "luggage"
+                }
+              ]
+            },
+            {
+              "id": "cama",
+              "label": "Configuração de cama",
+              "icon": "bed",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "casal",
+                  "label": "Casal",
+                  "art": "cama-casal"
+                },
+                {
+                  "value": "queen",
+                  "label": "Queen",
+                  "art": "cama-queen"
+                },
+                {
+                  "value": "2-de-solteiro",
+                  "label": "2 de solteiro",
+                  "art": "cama-2solteiro",
+                  "hint": "juntam e separam"
+                }
+              ]
+            },
+            {
+              "id": "guardar",
+              "label": "Do que o hóspede precisa para guardar as coisas?",
+              "icon": "archive",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "so-o-basico",
+                  "label": "Só o básico",
+                  "icon": "luggage",
+                  "hint": "mala e um cabideiro",
+                  "exclusive": true
+                },
+                {
+                  "value": "armario-para-roupas",
+                  "label": "Armário para roupas",
+                  "icon": "archive"
+                },
+                {
+                  "value": "closet",
+                  "label": "Closet",
+                  "icon": "shirt"
+                },
+                {
+                  "value": "armario-no-banheiro",
+                  "label": "Armário no banheiro",
+                  "icon": "bath"
+                }
+              ],
+              "hint": "Quem está de passagem precisa de pouco. Quem fica mais, como pais que passam o fim de semana, costuma precisar de armário."
+            },
+            {
+              "id": "outro-uso",
+              "label": "O quarto também terá outro uso?",
+              "icon": "house",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "escritorio",
+                  "label": "Escritório",
+                  "icon": "laptop"
+                },
+                {
+                  "value": "academia",
+                  "label": "Academia",
+                  "icon": "dumbbell"
+                },
+                {
+                  "value": "brinquedoteca",
+                  "label": "Brinquedoteca",
+                  "icon": "puzzle"
+                },
+                {
+                  "value": "closet-extra",
+                  "label": "Closet extra",
+                  "icon": "shirt"
+                },
+                {
+                  "value": "so-hospedes",
+                  "label": "Só hóspedes",
+                  "icon": "bed"
+                }
+              ]
+            },
+            {
+              "id": "conforto",
+              "label": "Algum item de conforto que não pode faltar?",
+              "icon": "heart",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "equip",
+          "title": "Mobiliário e equipamentos",
+          "subtitle": "Praticidade e conforto sem sobrecarregar o ambiente.",
+          "questions": [
+            {
+              "id": "equip",
+              "label": "O que vai ter na suíte?",
+              "icon": "plug",
+              "type": "checklist",
+              "items": [
+                {
+                  "id": "tv",
+                  "label": "TV",
+                  "hint": "Tamanho / modelo",
+                  "icon": "tv"
+                },
+                {
+                  "id": "maleiro",
+                  "label": "Maleiro",
+                  "hint": "Banco, nicho ou suporte",
+                  "icon": "luggage"
+                },
+                {
+                  "id": "mesas-laterais",
+                  "label": "Mesas laterais",
+                  "hint": "1 ou 2",
+                  "icon": "lamp"
+                },
+                {
+                  "id": "poltrona-ou-banco",
+                  "label": "Poltrona ou banco",
+                  "hint": "Uso / preferência",
+                  "icon": "armchair"
+                },
+                {
+                  "id": "espelho-de-corpo-inteiro",
+                  "label": "Espelho de corpo inteiro",
+                  "hint": "Parede, porta ou solto",
+                  "icon": "mirror"
+                },
+                {
+                  "id": "blackout",
+                  "label": "Blackout",
+                  "hint": "Cortina ou persiana",
+                  "icon": "moon"
+                },
+                {
+                  "id": "apoio-para-notebook",
+                  "label": "Apoio para notebook",
+                  "hint": "Mesa ou bancada compacta",
+                  "icon": "laptop"
+                },
+                {
+                  "id": "tomadas-e-usb-na-cabeceira",
+                  "label": "Tomadas e USB na cabeceira",
+                  "hint": "Quantidade / posição",
+                  "icon": "plug"
+                },
+                {
+                  "id": "ar-condicionado",
+                  "label": "Ar-condicionado",
+                  "hint": "Modelo, se já tiver",
+                  "icon": "air-vent"
+                }
+              ]
+            },
+            {
+              "id": "ar-tipo",
+              "label": "Que tipo de ar-condicionado preferem?",
+              "icon": "air-vent",
+              "type": "single",
+              "options": [
+                {
+                  "value": "split",
+                  "label": "Split",
+                  "art": "ar-split",
+                  "hint": "aparelho na parede"
+                },
+                {
+                  "value": "cassete",
+                  "label": "Cassete",
+                  "art": "ar-cassete",
+                  "hint": "embutido no teto"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor no espaço",
+                  "exclusive": true
+                }
+              ],
+              "showIf": {
+                "q": "equip",
+                "is": "ar-condicionado"
+              }
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "banheiro",
+      "name": "Banheiros da casa",
+      "kicker": "Cuidado · Rotina · Praticidade",
+      "intro": "Vale para os banheiros das suítes e de uso comum. O banheiro da suíte master e os lavabos têm perguntas próprias.",
+      "cover": "img/capas/banheiro.jpg",
+      "deckPrompt": "Referências de banheiro: revestimentos, bancadas e metais.",
+      "images": [
+        {
+          "id": "banheiro-01",
+          "src": "img/banheiro/01.jpg",
+          "tags": [
+            "minimalista",
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banheiro-02",
+          "src": "img/banheiro/02.jpg",
+          "tags": [
+            "amadeirado",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banheiro-03",
+          "src": "img/banheiro/03.jpg",
+          "tags": [
+            "cor"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banheiro-04",
+          "src": "img/banheiro/04.jpg",
+          "tags": [
+            "cor",
+            "claro",
+            "amadeirado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banheiro-05",
+          "src": "img/banheiro/05.jpg",
+          "tags": [
+            "claro",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banheiro-06",
+          "src": "img/banheiro/06.jpg",
+          "tags": [
+            "cor",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banheiro-07",
+          "src": "img/banheiro/07.jpg",
+          "tags": [
+            "amadeirado",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banheiro-08",
+          "src": "img/banheiro/08.jpg",
+          "tags": [
+            "amadeirado",
+            "claro"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banheiro-09",
+          "src": "img/banheiro/09.jpg",
+          "tags": [
+            "minimalista",
+            "claro",
+            "dourado"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banheiro-10",
+          "src": "img/banheiro/10.jpg",
+          "tags": [
+            "amadeirado",
+            "minimalista"
+          ],
+          "theme": "Estilo e composição"
+        },
+        {
+          "id": "banheiro-11",
+          "src": "img/banheiro/11.jpg",
+          "tags": [
+            "claro",
+            "natural"
+          ],
+          "theme": "Estilo e composição"
+        }
+      ],
+      "groups": [
+        {
+          "id": "loucas",
+          "title": "Louças, metais e revestimentos",
+          "subtitle": "Vale para todos os banheiros da casa. A especificação final a gente compatibiliza no projeto.",
+          "questions": [
+            {
+              "id": "cuba",
+              "label": "Cuba",
+              "icon": "droplets",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "apoio",
+                  "label": "Apoio",
+                  "art": "lav-apoio",
+                  "hint": "sobre a bancada"
+                },
+                {
+                  "value": "semiencaixe",
+                  "label": "Semiencaixe",
+                  "art": "lav-semiencaixe",
+                  "hint": "metade para fora"
+                },
+                {
+                  "value": "embutir",
+                  "label": "Embutir",
+                  "art": "lav-embutir",
+                  "hint": "abaixo da pedra"
+                },
+                {
+                  "value": "esculpida",
+                  "label": "Esculpida",
+                  "art": "lav-esculpida",
+                  "hint": "na própria pedra"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que funcionar melhor",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "torneira",
+              "label": "Torneira",
+              "icon": "droplets",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "de-mesa",
+                  "label": "De mesa",
+                  "image": "img/opcoes/torneira_mesa.jpg"
+                },
+                {
+                  "value": "de-parede",
+                  "label": "De parede",
+                  "image": "img/opcoes/torneira_parede.jpg"
+                }
+              ]
+            },
+            {
+              "id": "armario",
+              "label": "Acima da bancada",
+              "icon": "archive",
+              "type": "single",
+              "options": [
+                {
+                  "value": "armario-com-espelho",
+                  "label": "Armário com espelho",
+                  "art": "armario-espelho",
+                  "hint": "espelho na frente das portas"
+                },
+                {
+                  "value": "so-espelho",
+                  "label": "Só espelho",
+                  "art": "espelho",
+                  "hint": "sem armário em cima"
+                }
+              ]
+            },
+            {
+              "id": "chuveiro",
+              "label": "Chuveiro",
+              "icon": "shower",
+              "type": "multi",
+              "options": [
+                {
+                  "value": "de-parede",
+                  "label": "De parede",
+                  "image": "img/opcoes/chuveiro_parede.jpg"
+                },
+                {
+                  "value": "de-teto",
+                  "label": "De teto",
+                  "image": "img/opcoes/chuveiro_teto.jpg"
+                }
+              ]
+            },
+            {
+              "id": "box",
+              "label": "Box do chuveiro",
+              "icon": "shower",
+              "type": "single",
+              "options": [
+                {
+                  "value": "ate-o-teto",
+                  "label": "Até o teto",
+                  "art": "box-teto",
+                  "hint": "vidro do piso ao teto"
+                },
+                {
+                  "value": "padrao",
+                  "label": "Padrão",
+                  "art": "box-padrao",
+                  "hint": "altura comum, aberto em cima"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "conforme o uso do banheiro",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "revestimento",
+              "label": "Como preferem os revestimentos?",
+              "icon": "layers",
+              "type": "single",
+              "options": [
+                {
+                  "value": "uniformes",
+                  "label": "Uniformes",
+                  "image": "img/opcoes/revest_uniforme.jpg",
+                  "hint": "o mesmo material em todas as paredes"
+                },
+                {
+                  "value": "uma-parede-de-destaque",
+                  "label": "Uma parede de destaque",
+                  "image": "img/opcoes/revest_destaque.jpg",
+                  "hint": "cor ou textura diferente em uma parede"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "art": "arquiteto",
+                  "hint": "o que valorizar mais o espaço",
+                  "exclusive": true
+                }
+              ]
+            },
+            {
+              "id": "revestimento-onde",
+              "label": "Onde seria o destaque?",
+              "icon": "layers",
+              "type": "single",
+              "options": [
+                {
+                  "value": "parede-do-box",
+                  "label": "Parede do box",
+                  "icon": "shower"
+                },
+                {
+                  "value": "parede-da-bancada",
+                  "label": "Parede da bancada",
+                  "icon": "droplets"
+                },
+                {
+                  "value": "arquiteto-define",
+                  "label": "Arquiteto define",
+                  "icon": "architect",
+                  "exclusive": true
+                }
+              ],
+              "showIf": {
+                "q": "revestimento",
+                "is": "uma-parede-de-destaque"
+              }
+            },
+            {
+              "id": "nicho",
+              "label": "Nicho no box para shampoo e produtos de higiene?",
+              "icon": "layers",
+              "type": "single",
+              "options": [
+                {
+                  "value": "sim",
+                  "label": "Sim"
+                },
+                {
+                  "value": "nao",
+                  "label": "Não"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "cesto",
+              "label": "Cesto de roupa",
+              "icon": "shirt",
+              "type": "single",
+              "options": [
+                {
+                  "value": "embutido-no-movel",
+                  "label": "Embutido no móvel",
+                  "icon": "archive"
+                },
+                {
+                  "value": "solto",
+                  "label": "Solto",
+                  "icon": "package"
+                }
+              ],
+              "off": true
+            },
+            {
+              "id": "obs",
+              "label": "Adicionar observação",
+              "type": "text",
+              "collapsed": true,
+              "placeholder": "Algo que queira contar sobre este ambiente, ou itens que serão mantidos."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

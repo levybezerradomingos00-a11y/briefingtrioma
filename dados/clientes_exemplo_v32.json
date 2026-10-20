@@ -1,0 +1,559 @@
+{
+  "_sobre": "Estado inicial (clientes de exemplo) gerado pela funcao Ny() da build v32. E o que 'Restaurar exemplos' recria. Formato salvo em localStorage na chave trioma-briefing:v2.",
+  "version": 1,
+  "clients": [
+    {
+      "id": "c-demo",
+      "token": "teste-perguntas-p8w2k",
+      "name": "Teste das perguntas",
+      "project": "Poucas imagens, para ver as perguntas visuais",
+      "createdAt": "2026-10-14T12:00:00.000Z",
+      "example": true,
+      "environments": [
+        {
+          "uid": "e38qxycl",
+          "templateId": "geral",
+          "label": "Sobre a família",
+          "hiddenImages": [],
+          "hiddenQuestions": [
+            "aumentar",
+            "tv",
+            "quem-cozinha",
+            "hobby",
+            "valorizam",
+            "prioridades",
+            "manutencao",
+            "plantas",
+            "arte"
+          ]
+        },
+        {
+          "uid": "e7t85dfm",
+          "templateId": "sala",
+          "label": "Sala de estar e jantar",
+          "hiddenImages": [
+            "sala-04",
+            "sala-05",
+            "sala-06",
+            "sala-07",
+            "sala-08",
+            "sala-09",
+            "sala-10",
+            "sala-11",
+            "sala-12",
+            "sala-13",
+            "sala-14",
+            "sala-15",
+            "sala-16",
+            "sala-17",
+            "sala-18",
+            "sala-19",
+            "sala-20",
+            "sala-21",
+            "sala-22",
+            "sala-23",
+            "sala-24"
+          ],
+          "hiddenQuestions": [
+            "linguagem",
+            "luz",
+            "cortinas"
+          ]
+        },
+        {
+          "uid": "ey33t25v",
+          "templateId": "cozinha",
+          "label": "Cozinha",
+          "hiddenImages": [
+            "cozinha-04",
+            "cozinha-05",
+            "cozinha-06",
+            "cozinha-07",
+            "cozinha-08",
+            "cozinha-09",
+            "cozinha-10",
+            "cozinha-11",
+            "cozinha-12",
+            "cozinha-13",
+            "cozinha-14",
+            "cozinha-15",
+            "cozinha-16",
+            "cozinha-17",
+            "cozinha-18",
+            "cozinha-19",
+            "cozinha-20",
+            "cozinha-21"
+          ],
+          "hiddenQuestions": [
+            "embutidos",
+            "despensa",
+            "fruteira",
+            "refeicoes"
+          ]
+        },
+        {
+          "uid": "enfd7g8i",
+          "templateId": "lavabo_interno",
+          "label": "Lavabo interno",
+          "hiddenImages": [],
+          "hiddenQuestions": []
+        },
+        {
+          "uid": "ecls241z",
+          "templateId": "lavabo_externo",
+          "label": "Lavabo externo",
+          "hiddenImages": [],
+          "hiddenQuestions": []
+        },
+        {
+          "uid": "eyuupbfd",
+          "templateId": "master",
+          "label": "Suíte master",
+          "hiddenImages": [
+            "master-04",
+            "master-05",
+            "master-06",
+            "master-07",
+            "master-08",
+            "master-09",
+            "master-10",
+            "master-11",
+            "master-12",
+            "master-13",
+            "master-14",
+            "master-15",
+            "master-16",
+            "master-17",
+            "master-18",
+            "master-19",
+            "master-20",
+            "master-21"
+          ],
+          "hiddenQuestions": []
+        },
+        {
+          "uid": "ezkbnjew",
+          "templateId": "closet",
+          "label": "Closet master",
+          "hiddenImages": [
+            "closet-04",
+            "closet-05",
+            "closet-06",
+            "closet-07",
+            "closet-08",
+            "closet-09",
+            "closet-10",
+            "closet-11"
+          ],
+          "hiddenQuestions": []
+        },
+        {
+          "uid": "ewigphgl",
+          "templateId": "banho_master",
+          "label": "Banheiro master",
+          "hiddenImages": [
+            "banho_master-04",
+            "banho_master-05",
+            "banho_master-06",
+            "banho_master-07",
+            "banho_master-08",
+            "banho_master-09",
+            "banho_master-10",
+            "banho_master-11",
+            "banho_master-12",
+            "banho_master-13",
+            "banho_master-14"
+          ],
+          "hiddenQuestions": [
+            "nichos"
+          ]
+        },
+        {
+          "uid": "ep8g2k7q",
+          "templateId": "hospedes",
+          "label": "Suíte de hóspedes térreo",
+          "hiddenImages": [
+            "hospedes-04",
+            "hospedes-05",
+            "hospedes-06",
+            "hospedes-07",
+            "hospedes-08",
+            "hospedes-09",
+            "hospedes-10"
+          ],
+          "hiddenQuestions": []
+        },
+        {
+          "uid": "e049aluu",
+          "templateId": "hospedes_superior",
+          "label": "Suíte de hóspedes superior",
+          "hiddenImages": [
+            "hospedes-04",
+            "hospedes-05",
+            "hospedes-06",
+            "hospedes-07",
+            "hospedes-08",
+            "hospedes-09",
+            "hospedes-10"
+          ],
+          "hiddenQuestions": []
+        },
+        {
+          "uid": "ewspbc69",
+          "templateId": "banheiro",
+          "label": "Banheiros da casa",
+          "hiddenImages": [
+            "banheiro-04",
+            "banheiro-05",
+            "banheiro-06",
+            "banheiro-07",
+            "banheiro-08",
+            "banheiro-09",
+            "banheiro-10",
+            "banheiro-11"
+          ],
+          "hiddenQuestions": [
+            "nicho",
+            "cesto"
+          ]
+        },
+        {
+          "uid": "eb8qdc72",
+          "templateId": "closet_suite",
+          "label": "Closet suíte",
+          "hiddenImages": [
+            "closet_suite-04",
+            "closet_suite-05"
+          ],
+          "hiddenQuestions": []
+        }
+      ]
+    },
+    {
+      "id": "c-brendo",
+      "token": "brendo-x4m9",
+      "name": "Brendo",
+      "project": "Sala e cozinha",
+      "createdAt": "2026-10-06T13:10:00.000Z",
+      "sentAt": "2026-10-06T13:20:00.000Z",
+      "example": true,
+      "environments": [
+        {
+          "uid": "e79z6et2",
+          "templateId": "sala",
+          "label": "Sala de estar e jantar",
+          "hiddenImages": [
+            "sala-04"
+          ],
+          "hiddenQuestions": [
+            "linguagem",
+            "luz",
+            "cortinas"
+          ]
+        },
+        {
+          "uid": "ectewdwg",
+          "templateId": "cozinha",
+          "label": "Cozinha",
+          "hiddenImages": [
+            "cozinha-13"
+          ],
+          "hiddenQuestions": [
+            "embutidos",
+            "despensa",
+            "fruteira",
+            "refeicoes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c-aldo",
+      "token": "aldo-e-andressa-7k2p",
+      "name": "Aldo e Andressa",
+      "project": "Residência completa",
+      "createdAt": "2026-09-08T19:51:00.000Z",
+      "example": true,
+      "environments": [
+        {
+          "uid": "e9spwjfm",
+          "templateId": "geral",
+          "label": "Sobre a família",
+          "hiddenImages": [],
+          "hiddenQuestions": [
+            "aumentar",
+            "tv",
+            "quem-cozinha",
+            "hobby",
+            "valorizam",
+            "prioridades",
+            "manutencao",
+            "plantas",
+            "arte"
+          ]
+        },
+        {
+          "uid": "exihezsw",
+          "templateId": "hall",
+          "label": "Hall de entrada",
+          "hiddenImages": [],
+          "hiddenQuestions": [
+            "transmitir",
+            "sapatos"
+          ]
+        },
+        {
+          "uid": "e73oo9g7",
+          "templateId": "sala",
+          "label": "Sala de estar e jantar",
+          "hiddenImages": [],
+          "hiddenQuestions": [
+            "linguagem",
+            "luz",
+            "cortinas"
+          ]
+        },
+        {
+          "uid": "eaif29g5",
+          "templateId": "cozinha",
+          "label": "Cozinha",
+          "hiddenImages": [],
+          "hiddenQuestions": [
+            "embutidos",
+            "despensa",
+            "fruteira",
+            "refeicoes"
+          ]
+        },
+        {
+          "uid": "eoyscc9a",
+          "templateId": "gourmet",
+          "label": "Varanda gourmet",
+          "hiddenImages": [],
+          "hiddenQuestions": [
+            "vegetacao",
+            "movel"
+          ]
+        },
+        {
+          "uid": "e0z653yy",
+          "templateId": "master",
+          "label": "Suíte master",
+          "hiddenImages": [],
+          "hiddenQuestions": []
+        },
+        {
+          "uid": "emhi3nry",
+          "templateId": "closet",
+          "label": "Closet master",
+          "hiddenImages": [],
+          "hiddenQuestions": []
+        },
+        {
+          "uid": "eytntzzv",
+          "templateId": "banho_master",
+          "label": "Banheiro master",
+          "hiddenImages": [],
+          "hiddenQuestions": [
+            "nichos"
+          ]
+        },
+        {
+          "uid": "e6yz5tg9",
+          "templateId": "servico",
+          "label": "Área de serviço",
+          "hiddenImages": [],
+          "hiddenQuestions": []
+        },
+        {
+          "uid": "e6wljpzi",
+          "templateId": "quarto",
+          "label": "Suíte 01",
+          "hiddenImages": [],
+          "hiddenQuestions": [
+            "perfil",
+            "cortina",
+            "pecas-longas",
+            "calcados"
+          ]
+        },
+        {
+          "uid": "exvsa6ld",
+          "templateId": "hospedes",
+          "label": "Suíte de hóspedes térreo",
+          "hiddenImages": [],
+          "hiddenQuestions": []
+        },
+        {
+          "uid": "ego7khjz",
+          "templateId": "banheiro",
+          "label": "Banheiros da casa",
+          "hiddenImages": [],
+          "hiddenQuestions": [
+            "nicho",
+            "cesto"
+          ]
+        }
+      ]
+    }
+  ],
+  "responses": {
+    "c-brendo": {
+      "clientId": "c-brendo",
+      "swipes": {
+        "e79z6et2": {
+          "sala-01": "dislike",
+          "sala-02": "like",
+          "sala-03": "like",
+          "sala-05": "like",
+          "sala-06": "like",
+          "sala-07": "like",
+          "sala-08": "neutral",
+          "sala-09": "neutral",
+          "sala-10": "like",
+          "sala-11": "like",
+          "sala-12": "dislike"
+        },
+        "ectewdwg": {
+          "cozinha-01": "neutral",
+          "cozinha-02": "like",
+          "cozinha-03": "like",
+          "cozinha-04": "dislike",
+          "cozinha-05": "dislike",
+          "cozinha-06": "dislike",
+          "cozinha-07": "dislike",
+          "cozinha-08": "like",
+          "cozinha-09": "neutral",
+          "cozinha-10": "like",
+          "cozinha-11": "like",
+          "cozinha-12": "neutral",
+          "cozinha-14": "neutral",
+          "cozinha-15": "dislike",
+          "cozinha-16": "dislike"
+        }
+      },
+      "swipeLog": {
+        "e79z6et2": [
+          "sala-01",
+          "sala-02",
+          "sala-03",
+          "sala-05",
+          "sala-06",
+          "sala-07",
+          "sala-08",
+          "sala-09",
+          "sala-10",
+          "sala-11",
+          "sala-12"
+        ],
+        "ectewdwg": [
+          "cozinha-01",
+          "cozinha-02",
+          "cozinha-03",
+          "cozinha-04",
+          "cozinha-05",
+          "cozinha-06",
+          "cozinha-07",
+          "cozinha-08",
+          "cozinha-09",
+          "cozinha-10",
+          "cozinha-11",
+          "cozinha-12",
+          "cozinha-14",
+          "cozinha-15",
+          "cozinha-16"
+        ]
+      },
+      "notes": {
+        "e79z6et2": "Gosto da madeira com tons claros e de plantas. Nada muito escuro ou formal.",
+        "ectewdwg": "Ilha com pedra clara e banquetas. Madeira na marcenaria."
+      },
+      "answers": {
+        "e79z6et2": {
+          "tv-familia": "sim",
+          "visitas": "em-ambos",
+          "receber-qtd": "10",
+          "lugares-mesa": "6",
+          "mesa-formato": "retangular",
+          "linguagem": "2",
+          "luz": "aconchegante",
+          "cortinas": [
+            "cortina-de-tecido"
+          ],
+          "equip": {
+            "tv": {
+              "has": "sim",
+              "spec": "65 polegadas"
+            },
+            "som-embutido": {
+              "has": "sim",
+              "spec": "Teto"
+            },
+            "ar-condicionado": {
+              "has": "sim",
+              "spec": "Split"
+            }
+          }
+        },
+        "ectewdwg": {
+          "mostra": "um-pouco-de-cada",
+          "frequencia": "algumas-vezes-por-semana",
+          "refeicoes": [
+            "sim-numa-ilha-ou-bancada"
+          ],
+          "equip": {
+            "geladeira": {
+              "has": "sim",
+              "spec": "Side by side, 91 cm"
+            },
+            "lava-loucas": {
+              "has": "sim",
+              "spec": "14 serviços"
+            }
+          },
+          "agua": [
+            "filtro-da-geladeira"
+          ],
+          "lixeira": "embutida-na-bancada",
+          "cuba": [
+            "esculpida"
+          ],
+          "calha": "sim",
+          "material": [
+            "super-nano"
+          ],
+          "metais": [
+            "preto"
+          ],
+          "coccao": {
+            "cooktop-de-inducao": {
+              "has": "sim"
+            },
+            "forno-eletrico": {
+              "has": "sim"
+            },
+            "micro-ondas": {
+              "has": "sim",
+              "spec": "Embutido"
+            },
+            "coifa-de-ilha": {
+              "has": "sim"
+            }
+          },
+          "bocas": "5"
+        }
+      },
+      "answerNotes": {},
+      "step": 99,
+      "startedAt": "2026-10-07T21:02:00.000Z",
+      "updatedAt": "2026-10-07T21:19:00.000Z",
+      "completedAt": "2026-10-07T21:19:00.000Z"
+    }
+  },
+  "library": {
+    "extraImages": {},
+    "removedImages": [],
+    "tagEdits": {},
+    "extraQuestions": {}
+  }
+}

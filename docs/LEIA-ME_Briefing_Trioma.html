@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Briefing Trioma · Entrega</title>
+<style>
+:root{--bg:#f3f0ea;--paper:#fbfaf7;--ink:#1d1b18;--muted:#6f675e;--line:#ddd5ca;--accent:#8e7660;--code:#efe9e0;--warn:#fff4e5;--warn-line:#e7c58f}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--paper:#1f1e1b;--ink:#ede8e0;--muted:#a8a095;--line:#3a3732;--accent:#c4a888;--code:#2a2824;--warn:#2d2519;--warn-line:#6e5a37}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:880px;margin:0 auto;padding:40px 16px 80px}
+.brand{letter-spacing:.35em;font-weight:300;font-size:13px;color:var(--muted);margin-bottom:8px}
+h1{font-weight:400;font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 16px}
+h2{font-weight:500;font-size:22px;margin:44px 0 12px;padding-top:20px;border-top:1px solid var(--line)}
+h3{font-weight:600;font-size:17px;margin:28px 0 8px}
+p,li{max-width:72ch}
+a{color:var(--accent)}
+hr{display:none}
+code{background:var(--code);padding:1px 6px;border-radius:5px;font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre{background:var(--code);padding:14px 16px;border-radius:10px;overflow-x:auto}
+pre code{padding:0;background:none}
+.tbl{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font-weight:600;color:var(--muted);font-size:13px}
+li{margin:4px 0}
+li.todo{list-style:none;margin-left:-22px}
+.box{display:inline-block;width:14px;height:14px;border:1.5px solid var(--muted);border-radius:4px;margin-right:10px;vertical-align:-2px}
+strong{font-weight:600}
+h2#2-situacao-atual-leia-antes-de-publicar + p{background:var(--warn);border:1px solid var(--warn-line);border-radius:10px;padding:12px 14px}
+</style></head><body><main><div class="brand">TRIOMA · ARQUITETURA E INTERIORES</div>
+<h1>Briefing Trioma: entrega da primeira etapa</h1>
+<p>Lucas, este é o pacote da primeira etapa do briefing de interiores da Trioma. Ele substitui o PDF de 40 a 60 páginas por uma página interativa. O escritório monta o briefing de cada cliente e envia um link. O cliente arrasta fotos de referência (gosto / não gosto / neutro) e responde perguntas pelo celular, iPad ou computador. No fim, o escritório vê um relatório com o perfil de estilo e exporta um PDF.</p>
+<p>Data: 20/10/2026.</p>
+<hr />
+<h2>1. O que tem nesta pasta</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>O que é</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LEIA-ME_Briefing_Trioma.html</code></td>
+<td>Este documento, para abrir no navegador.</td>
+</tr>
+<tr>
+<td><code>LEIA-ME_Briefing_Trioma.md</code></td>
+<td>Este documento, em Markdown.</td>
+</tr>
+<tr>
+<td><code>briefing-trioma-site.zip</code></td>
+<td><strong>Arquivos para hospedar o site.</strong> É só descompactar na raiz do domínio (ver seção 3). Com <code>modoTeste: true</code> na configuração, ele vira a versão de demonstração, com clientes de exemplo.</td>
+</tr>
+<tr>
+<td><code>artefatos/documentacao/</code></td>
+<td>Histórico de todas as mudanças (<code>ATUALIZACOES.md</code>), catálogo de ambientes e perguntas, contexto completo do projeto e manifesto.</td>
+</tr>
+<tr>
+<td><code>artefatos/dados/</code></td>
+<td>Catálogo de ambientes em JSON e clientes de exemplo, que mostram o formato dos dados.</td>
+</tr>
+<tr>
+<td><code>artefatos/codigo_legivel/</code></td>
+<td>O script e o CSS da build formatados para leitura.</td>
+</tr>
+<tr>
+<td><code>artefatos/servidor/notify.py</code></td>
+<td>Rota FastAPI que envia o PDF por e-mail quando o cliente conclui.</td>
+</tr>
+<tr>
+<td><code>artefatos/relatorios/</code></td>
+<td>Planilha de otimização de imagens, peso de cada imagem (<code>PESOS_IMAGENS.csv</code>) e um PDF de exemplo gerado pelo sistema.</td>
+</tr>
+<tr>
+<td><code>artefatos/capturas_de_tela/</code></td>
+<td>Telas do celular, do iPad e do painel. São da versão de 14/10: a estrutura é a mesma, mas as fotos de referência e as capas mudaram depois.</td>
+</tr>
+</tbody>
+</table></div>
+<p>As fotos originais escolhidas pelo escritório (JPG) estão na pasta <code>IMAGENS BRIEFING</code> do computador do Levy. As usadas no site já estão convertidas no zip.</p>
+<hr />
+<h2 id="2-situacao-atual-leia-antes-de-publicar">2. Situação atual: leia antes de publicar</h2>
+<p><strong>A interface está pronta e testada. O que falta é o servidor.</strong> Hoje todos os dados ficam no <code>localStorage</code> do navegador de quem usa:</p>
+<ul>
+<li>O briefing que o escritório monta no painel fica só no aparelho do escritório.</li>
+<li>Quando o cliente abrir o link no celular dele, vai ver <strong>"Briefing não encontrado"</strong>, porque aquele navegador não tem os dados.</li>
+<li>As respostas do cliente também ficam só no aparelho dele.</li>
+</ul>
+<p><strong>Publicar o zip como está serve para testar no próprio aparelho, mas ainda não para atender clientes.</strong></p>
+<h3>O que precisa existir no servidor</h3>
+<ol>
+<li><strong>Banco de dados e API</strong> para:
+   - salvar e listar os briefings (clientes, ambientes escolhidos, personalizações);
+   - entregar um briefing pelo código do link;
+   - receber e salvar as respostas do cliente.</li>
+<li><strong>Login no painel.</strong> Hoje qualquer pessoa que abrir a raiz do site entra no painel.</li>
+<li><strong>Armazenamento das fotos que o escritório sobe pela Biblioteca.</strong> Hoje elas ficam no IndexedDB do aparelho (banco <code>trioma-briefing</code>, tabela <code>images</code>).</li>
+<li><strong>E-mail automático:</strong> a rota de <code>artefatos/servidor/notify.py</code>, com conta SMTP. Destinatários padrão: <code>levybezerradomingos00@gmail.com</code> e <code>pbstudioarq@gmail.com</code>.</li>
+</ol>
+<h3>Onde ligar o front na API</h3>
+<p>Só existe a <strong>build compilada</strong> (um único <code>index.html</code> com o JavaScript minificado). O código-fonte original em React/TypeScript se perdeu em sessões anteriores. Dá para integrar editando a build em poucos pontos, que estão nomeados para facilitar a busca:</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Função na build</th>
+<th>O que faz hoje</th>
+<th>O que trocar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>function Zw()</code></td>
+<td>Lê todo o estado do <code>localStorage</code> (chave <code>trioma-briefing:v2</code>).</td>
+<td>No <strong>painel</strong>: <code>GET</code> dos briefings do escritório. No <strong>link do cliente</strong>: <code>GET /briefings/&lt;codigo&gt;</code>, que devolve o briefing, a biblioteca e as respostas.</td>
+</tr>
+<tr>
+<td><code>function Kw(e)</code></td>
+<td>Salva todo o estado no <code>localStorage</code> a cada mudança.</td>
+<td><code>PUT</code> das respostas (cliente) ou do briefing (painel). Vale salvar com intervalo de ~1 s, para não chamar a API a cada toque.</td>
+</tr>
+<tr>
+<td><code>function zzNotify(e,t)</code></td>
+<td>Gera o PDF e faz <code>POST {apiUrl}/briefings/{token}/concluido</code> quando o cliente conclui.</td>
+<td>Já pronto. Só precisa do <code>apiUrl</code> na configuração e da rota do <code>notify.py</code>.</td>
+</tr>
+<tr>
+<td><code>t6()</code> / <code>n6()</code> (IndexedDB)</td>
+<td>Guardam as fotos que o escritório sobe.</td>
+<td>Upload para o servidor e uso da URL retornada.</td>
+</tr>
+</tbody>
+</table></div>
+<p>O formato do estado está em <code>artefatos/dados/clientes_exemplo_v32.json</code>:
+- <code>clients[]</code>: cada cliente com <code>token</code>, <code>environments[]</code>, <code>hiddenImages</code> e <code>hiddenQuestions</code>;
+- <code>responses{}</code>: por cliente, com <code>swipes</code>, <code>answers</code>, <code>notes</code>, <code>step</code>, <code>startedAt</code> e <code>completedAt</code>;
+- <code>library{}</code>: personalizações da Biblioteca.</p>
+<p>Se for mais simples, outra opção é <strong>reconstruir o projeto Vite</strong> a partir da build, do catálogo (<code>dados/</code>) e das capturas de tela. A stack combinada no início foi React + TypeScript + Vite no front e FastAPI + SQLAlchemy no backend.</p>
+<hr />
+<h2>3. Como hospedar o zip</h2>
+<h3>3.1 Conteúdo</h3>
+<pre><code>index.html            página única (painel + briefing do cliente)
+pdf.js                gerador de PDF, carregado só quando precisa (~419 KB)
+img/                  358 imagens WebP (todas abaixo de 100 KB) + og.jpg (prévia do link)
+favicon-32.png, icon-512.png, apple-touch-icon.png
+_redirects, _headers  regras para Netlify / Cloudflare Pages
+.htaccess             as mesmas regras para Apache
+</code></pre>
+<p>O total é de cerca de 25 MB. Tudo é estático: não há build nem dependências.</p>
+<h3>3.2 Configuração: um único bloco no <code>&lt;head&gt;</code> do <code>index.html</code></h3>
+<pre><code class="language-js">window.TRIOMA_CONFIG = {
+  modoTeste: false,                 // true = clientes de exemplo, selo &quot;Protótipo&quot; e botão &quot;Painel&quot; no link do cliente
+  siteUrl: &quot;https://SEU-DOMINIO&quot;,   // monta o link do cliente: &lt;siteUrl&gt;/briefing/&lt;codigo&gt;
+  apiUrl: &quot;&quot;,                       // endereço da API; vazio = não envia o PDF por e-mail
+  whatsappEscritorio: &quot;&quot;,           // só números com DDI; vazio = o WhatsApp abre para escolher contato ou grupo
+  politicaPrivacidadeUrl: &quot;&quot;        // aparece na tela inicial do cliente
+};
+</code></pre>
+<p>Também no <code>&lt;head&gt;</code>:
+- troque <code>SEU-DOMINIO</code> em <code>og:image</code> pelo domínio real. É a foto que aparece na prévia do link no WhatsApp, e precisa ser um endereço completo;
+- <code>&lt;base href="/"&gt;</code> diz em que pasta o site está. Se ficar numa subpasta, ajuste (ex.: <code>/briefing-app/</code>).</p>
+<h3>3.3 Regras do servidor (obrigatórias)</h3>
+<ul>
+<li><strong><code>/briefing/&lt;codigo&gt;</code> deve abrir o <code>index.html</code>.</strong> O código do link é lido pelo próprio endereço. Os arquivos <code>_redirects</code> e <code>.htaccess</code> já fazem isso.</li>
+<li><strong>Tipo dos arquivos:</strong> sirva <code>.webp</code> como <code>image/webp</code> e <code>.js</code> como <code>text/javascript</code>. O <code>pdf.js</code> é carregado com <code>import()</code> e precisa vir do mesmo domínio.</li>
+<li><strong>Cache longo</strong> para <code>img/</code> e <code>pdf.js</code>, e <code>no-cache</code> no <code>index.html</code>. Já está no <code>_headers</code> e no <code>.htaccess</code>.</li>
+<li><strong>Compressão (gzip/brotli):</strong> o <code>index.html</code> cai de 451 KB para ~129 KB.</li>
+</ul>
+<h3>3.4 Testar localmente</h3>
+<p>Abra o <code>index.html</code> por um servidor local, porque o <code>pdf.js</code> não carrega direto do disco:</p>
+<pre><code>cd pasta-descompactada
+python -m http.server 8000
+</code></pre>
+<p>Depois acesse <code>http://localhost:8000</code>. Para testar a rota <code>/briefing/&lt;codigo&gt;</code> localmente é preciso um servidor com a regra de reescrita. Sem ela, use <code>http://localhost:8000/#b-&lt;codigo&gt;</code>, que também funciona.</p>
+<hr />
+<h2>4. O que já foi feito e testado nesta etapa</h2>
+<ul>
+<li><strong>Fotos de referência do escritório</strong> em 13 ambientes. As fotos antigas continuam na Biblioteca, mas desligadas por padrão. No Closet master ficam as duas.</li>
+<li><strong>Lavabo unificado</strong>, com a escolha Interno ou Externo ao montar o briefing.</li>
+<li><strong>Imagens em WebP</strong> abaixo de 100 KB: de 52,6 MB para 24,0 MB. Detalhes em <code>relatorios/</code>.</li>
+<li><strong>Carregamento por etapa:</strong> cada tela baixa só as próprias imagens e prepara a próxima tela provável, já considerando as respostas. Nas referências fica pronta a foto atual + 2.</li>
+<li><strong>Rede lenta:</strong></li>
+<li>o cartão mostra a cor média da foto enquanto ela carrega;</li>
+<li>não deixa escolher antes de a foto aparecer;</li>
+<li>depois de 8 s oferece "Tentar de novo" ou "Pular esta".</li>
+<li><strong>Gerador de PDF separado</strong> (<code>pdf.js</code>). A página abre com metade do peso. O PDF gerado é idêntico ao da versão anterior.</li>
+<li><strong>Recarregar a página volta para a mesma tela.</strong> O Safari do iPad recarrega quando falta memória. A lista "Que bom ter vocês de volta" só aparece depois de 30 minutos parado.</li>
+<li><strong>Botão "Compartilhar"</strong> na página de respostas do cliente, para reenviar o link.</li>
+<li><strong>Modo de produção:</strong></li>
+<li>no link do cliente não aparece o botão "Painel";</li>
+<li>sem selo de protótipo e sem clientes de exemplo;</li>
+<li>aviso de privacidade na tela inicial do cliente;</li>
+<li>prévia do link com título, descrição e foto, e ícones do site.</li>
+</ul>
+<p>Todos esses itens foram testados em navegador simulando celular, iPad e computador, inclusive com rede lenta. <strong>O teste em aparelho físico e no domínio real ainda precisa ser feito.</strong></p>
+<hr />
+<h2>5. Checklist antes de abrir para clientes</h2>
+<ul>
+<li class="todo"><span class="box"></span>API e banco ligados em <code>Zw</code> / <code>Kw</code> (seção 2)</li>
+<li class="todo"><span class="box"></span>Login no painel</li>
+<li class="todo"><span class="box"></span>Upload das fotos da Biblioteca para o servidor</li>
+<li class="todo"><span class="box"></span><code>siteUrl</code>, <code>og:image</code> e <code>&lt;base href&gt;</code> com o domínio real</li>
+<li class="todo"><span class="box"></span><code>apiUrl</code> + SMTP do <code>notify.py</code> (e-mail com o PDF)</li>
+<li class="todo"><span class="box"></span>Política de privacidade publicada e <code>politicaPrivacidadeUrl</code> preenchida (LGPD: o briefing coleta rotina, composição da família e pets)</li>
+<li class="todo"><span class="box"></span>Regras de <code>/briefing/*</code>, cache e compressão ativas no servidor</li>
+<li class="todo"><span class="box"></span>Teste completo num iPhone e num iPad reais: abrir o link, responder, concluir e baixar o PDF</li>
+</ul>
+<h2>6. Pendências de conteúdo (não impedem a publicação)</h2>
+<ul>
+<li>Botão "Editar texto"</li>
+<li>Separar as páginas dos banheiros</li>
+<li>Pergunta de Organização na cozinha</li>
+<li>"Para dormir" na suíte master</li>
+<li>Trocar "Os dois" por "Ambos"</li>
+</ul>
+</main></body></html>

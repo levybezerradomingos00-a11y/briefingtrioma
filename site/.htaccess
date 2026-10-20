@@ -1,0 +1,15 @@
+# Apache: /briefing/<codigo> abre o index.html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^briefing/ index.html [L]
+AddType image/webp .webp
+AddType text/javascript .js
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType text/javascript "access plus 1 day"
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/javascript application/javascript
+</IfModule>

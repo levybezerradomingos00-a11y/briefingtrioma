@@ -1,0 +1,6 @@
+/img/*
+  Cache-Control: public, max-age=2592000
+/pdf.js
+  Cache-Control: public, max-age=86400
+/index.html
+  Cache-Control: no-cache
