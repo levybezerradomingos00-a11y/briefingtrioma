@@ -98,6 +98,7 @@ Também no `<head>`:
 - **`/briefing/<codigo>` deve abrir o `index.html`.** O código do link é lido pelo próprio endereço. Os arquivos `_redirects` e `.htaccess` já fazem isso.
 - **Tipo dos arquivos:** sirva `.webp` como `image/webp` e `.js` como `text/javascript`. O `pdf.js` é carregado com `import()` e precisa vir do mesmo domínio.
 - **Cache longo** para `img/` e `pdf.js`, e `no-cache` no `index.html`. Já está no `_headers` e no `.htaccess`.
+- **Vercel:** o `vercel.json` na raiz do repositório já aponta a pasta publicada (`site/`), desliga o build e cria a regra de `/briefing/<codigo>`. Na importação, deixe o *Framework Preset* em **Other** e o *Root Directory* na raiz do repositório.
 - **Compressão (gzip/brotli):** o `index.html` cai de 451 KB para ~129 KB.
 
 ### 3.4 Testar localmente
